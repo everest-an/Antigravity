@@ -2,7 +2,17 @@
 
 《从特斯拉到时空工程》——统一场、量子现实与可编程时空。
 
-## 仓库状态
+## 正式论文（投稿格式，中英双语）
+
+- [`论文-中文版.md`](./论文-中文版.md) —— 《三种统一：量子引力前沿的一张可证伪地图》
+  （摘要/关键词/十节正文/30 条参考文献/图 6 幅/作者贡献/数据可用性）
+- [`论文-英文版.md`](./论文-英文版.md) —— Three Unifications: A Falsifiable Map of the
+  Quantum-Gravity Frontier（同构英文版）
+- PDF：`build/三种统一-中文版.pdf`、`build/Three-Unifications-英文版.pdf`
+  （`py build\build_pdf.py` 一键重新生成）
+- 汇报版：`ppt/从特斯拉到时空工程-汇报.pptx`（15 页，图 5 幅 + 表 5 张 + 演讲备注）
+
+## 工作文档（90 节全稿与严谨化附件）
 
 - [`第1-28节.md`](./第1-28节.md) —— Tesla 反重力传说考证与早期统一场论史（全文）。
   摘要、Tesla 可核验文本、Einstein 冲突、质量不是引力唯一源、旋转与 frame dragging、
