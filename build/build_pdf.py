@@ -19,6 +19,11 @@ PAPER = ROOT / "paper"
 BUILD = ROOT / "build"
 BUILD.mkdir(exist_ok=True)
 
+# typst 可执行文件（winget 安装位置；也支持 PATH 中的 typst）
+import shutil as _shutil
+TYPST = _shutil.which("typst") or str(
+    Path.home() / "AppData/Local/Microsoft/WinGet/Links/typst.exe")
+
 JOBS = [
     ("三种统一-中文版.typ", "三种统一-中文版.pdf"),
     ("Three-Unifications-英文版.typ", "Three-Unifications-英文版.pdf"),
@@ -26,7 +31,7 @@ JOBS = [
 
 for src, dst in JOBS:
     r = subprocess.run(
-        ["typst", "compile", str(PAPER / src), str(BUILD / dst), "--root", str(ROOT)],
+        [TYPST, "compile", str(PAPER / src), str(BUILD / dst), "--root", str(ROOT)],
         capture_output=True, text=True, encoding="utf-8", errors="replace",
     )
     size = (BUILD / dst).stat().st_size if (BUILD / dst).exists() else 0
