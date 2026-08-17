@@ -1,4 +1,4 @@
-﻿#set page(paper: "a4", margin: (x: 2.2cm, y: 2.4cm), numbering: "1 / 1")
+#set page(paper: "a4", margin: (x: 2.2cm, y: 2.4cm), numbering: "1 / 1")
 #set text(font: "New Computer Modern", size: 10.5pt, lang: "en")
 #set par(justify: true, leading: 0.75em)
 #set heading(numbering: "1.1.1")
@@ -16,6 +16,7 @@
 ]
 #set math.equation(numbering: "(1)")
 #set figure(placement: top)
+#show table: set text(size: 8.5pt)
 #show figure: set block(above: 1em, below: 1.2em)
 
 #align(center)[
@@ -69,7 +70,7 @@ The three claims fail in different modes, and the failure modes, not the claims,
 
 #figure(
   table(
-    columns: (auto, auto, auto, auto),
+    columns: (0.8fr, 2.6fr, 1.6fr, 2.2fr),
     align: (left, left, left, left),
     [*Type*], [*Proposition*], [*Failure mode*], [*Discriminating channel*],
     [Transformational], [$A$ converts into $B$ (Tesla/Zhang route)], [Quantitative], [Schwinger inversion + fifth-force landscape],
@@ -104,7 +105,7 @@ $ a_Y (r) = alpha (G M)/(r^2) (1 + r/lambda) e^(-r/lambda), $ <eq-yukawa>
 with coupling $alpha$ relative to $G$ and range $lambda$, is excluded at order unity across all probed scales: about $3 times 10^(-3)$ at $lambda = 10 μ"m"$ (Eöt-Wash torsion), $10^(-6)$ from millimeters to a hundred kilometers, and $10^(-9)$ to $10^(-15)$ at orbital scales. The only remaining opening lies below ten micrometers, where Casimir physics dominates. The full landscape is Figure 2.
 
 #figure(
-  image("../figures/fig04_fifth_force.png", width: 86%),
+  image("../figures/en_fig04_fifth_force.png", width: 86%),
   caption: [Figure 2: The fifth-force constraint landscape. The strongest combined constraint on the Yukawa coupling across range; the star marks the coupling required by electronvolt-scale Kaluza-Klein splitting claims, excluded by seven to eight orders of magnitude.]
 )
 
@@ -134,7 +135,7 @@ The instrument for that window is essentially complete (Table 2). The Th-229 iso
 
 #figure(
   table(
-    columns: (auto, auto, auto),
+    columns: (0.9fr, 3fr, 1.8fr),
     align: (left, left, left),
     [*Node*], [*Status*], [*Reference*],
     [Direct excitation], [$148.18 plus.minus 0.42 "nm"$, half-life $447 plus.minus 25 "s"$], [Hiraki et al., Nat. Commun. 2024],
@@ -266,7 +267,7 @@ and three models are constructed in a four-dimensional Hilbert space: (a) quantu
 Every row of the matrix carries four elements: evidence grade, discriminating channel, target theory, and timescale. A row is admitted only if it states what observation would exclude which theory, and on what timescale. This is the discipline the 2025 GIE debate taught the field: an observation discriminates between theories only if no competing theory reproduces it. Figure 1 gives the full matrix; Table 3 gives the statistics.
 
 #figure(
-  image("../figures/fig01_decision_matrix.png", width: 88%),
+  image("../figures/en_fig01_decision_matrix.png", width: 88%),
   caption: [Figure 1: The decision matrix. Nineteen arrows classified by verdict: falsified (red), established (green), grade-B (blue), grade-C (purple). Every row carries a discriminating channel, a target it would exclude, and a timescale.]
 )
 
@@ -274,7 +275,7 @@ Every row of the matrix carries four elements: evidence grade, discriminating ch
 
 #figure(
   table(
-    columns: (auto, auto, auto, auto),
+    columns: (0.8fr, 2.6fr, 1.6fr, 2.2fr),
     align: (left, left, left, left),
     [*No.*], [*Arrow*], [*Status*], [*Discriminating channel*],
     [3], [EM fields convert into gravity], [Falsified], [Schwinger computation (Eq. 1)],

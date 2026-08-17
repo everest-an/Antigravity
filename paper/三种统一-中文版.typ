@@ -1,4 +1,4 @@
-﻿#set page(paper: "a4", margin: (x: 2.2cm, y: 2.4cm), numbering: "1 / 1")
+#set page(paper: "a4", margin: (x: 2.2cm, y: 2.4cm), numbering: "1 / 1")
 #set text(font: ("New Computer Modern", "SimSun"), size: 10.5pt, lang: "zh")
 #set par(justify: true, first-line-indent: 2em, leading: 0.8em)
 #set heading(numbering: "1.1.1")
@@ -16,6 +16,7 @@
 ]
 #set math.equation(numbering: "(1)")
 #set figure(placement: top)
+#show table: set text(size: 8.5pt)
 #show figure: set block(above: 1em, below: 1.2em)
 
 #align(center)[
@@ -74,7 +75,7 @@
 #set par(first-line-indent: 0em)
 #figure(
   table(
-    columns: (auto, auto, auto, auto),
+    columns: (0.8fr, 2.6fr, 1.6fr, 2.2fr),
     align: (left, left, left, left),
     [*类型*], [*命题*], [*失败方式*], [*判决通道*],
     [转换式], [$A$ 场物理地转化为 $B$ 场（Tesla/张祥前路线）], [定量失败（初等算术）], [Schwinger 反推 + 第五力全景],
@@ -143,7 +144,7 @@ $ Delta E = m_"sys" alpha Delta Phi(r, lambda), $ <eq-ab>
 #set par(first-line-indent: 0em)
 #figure(
   table(
-    columns: (auto, auto, auto),
+    columns: (0.9fr, 3fr, 1.8fr),
     align: (left, left, left),
     [*节点*], [*内容*], [*文献*],
     [直接激发], [$148.18 plus.minus 0.42 "nm"$，半衰期 $447 plus.minus 25 "s"$], [Hiraki 等, Nat. Commun. 2024],
@@ -289,7 +290,7 @@ $ phi = (G m^2 t)/(ℏ) (1/(d+Delta x) + 1/(d-Delta x) - 2/d), $ <eq-gie>
 #set par(first-line-indent: 0em)
 #figure(
   table(
-    columns: (auto, auto, auto, auto),
+    columns: (0.8fr, 2.6fr, 1.6fr, 2.2fr),
     align: (left, left, left, left),
     [*序号*], [*箭头*], [*状态*], [*判别通道*],
     [3], [电磁场转化为引力], [已证伪], [Schwinger 计算（式 1）],
