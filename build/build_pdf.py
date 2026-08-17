@@ -73,37 +73,23 @@ def render_md(paths, title, subtitle, meta):
 
 
 def main():
-    # 中文版：正文 1-90 节 + 严谨化附件 A-G
-    cn_files = [
-        "第1-28节.md",
-        "统一场量子现实与可编程时空.md",
-        "时空之前是什么.md",
-        "质量-惯性与Tμν.md",
-        "实验路线图.md",
-        "物理现实的工程学边界.md",
-        "核心命题-形式化.md",
-        "原创贡献清单.md",
-        "体例与文风统一说明.md",
-        "参考文献总表.md",
-        "研究缺口补齐.md",
-        "优先权检索记录.md",
-        "投稿策略.md",
-    ]
+    # 中文版：正式论文（中文）
+    cn_files = ["论文-中文版.md"]
     cn = render_md(
         cn_files,
-        "从特斯拉到时空工程",
-        "统一场、量子现实与可编程时空（全稿：第 1–90 节 + 严谨化附件）",
+        "三种统一：量子引力前沿的一张可证伪地图",
+        "完整论文（中文版）",
         "作者：MuningAn　·　机构：PlanetarySystem　·　2026-08",
     )
     (ROOT / "paper_cn.html").write_text(cn, encoding="utf-8")
     print("paper_cn.html written, chars:", len(cn))
 
-    # 英文版：完整版（Part I 概念论文 + Parts II–VI 精译与形式装置）
-    en_files = ["English-完整版.md"]
+    # 英文版：正式论文（英文）
+    en_files = ["论文-英文版.md"]
     en = render_md(
         en_files,
         "Three Unifications: A Falsifiable Map of the Quantum-Gravity Frontier",
-        "Complete English Edition — from anti-gravity myths to the engineering of physical reality",
+        "Complete paper (English edition)",
         "MuningAn · PlanetarySystem · 2026-08",
     )
     (ROOT / "paper_en.html").write_text(en, encoding="utf-8")
