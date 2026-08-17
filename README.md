@@ -48,6 +48,10 @@
 - [`研究缺口补齐.md`](./研究缺口补齐.md) —— 严谨化附件 E：钍核钟 2024–26 现状、
   LIV/GUP 约束（判决矩阵新增第 19 行）、量子等效原理的实验现状与批评
   （Asenbaum–Overstreet 磁反冲警示）。
+- [`English-Submission-Blueprint.md`](./English-Submission-Blueprint.md) —— 投稿英文骨架：
+  摘要 + 三贡献 + 定理 + 19 行矩阵 + 可复现数据锚点（Perspective/框架论文底稿）。
+- [`投稿策略.md`](./投稿策略.md) —— 严谨化附件 F：四层目标（Perspective/框架论文/
+  概念论文/中文版）、时间线、阻塞项清单。
 
 ## 核心方法论纪律
 
