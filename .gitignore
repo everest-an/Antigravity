@@ -3,3 +3,5 @@
 .playwright-mcp/
 __pycache__/
 *.pyc
+/paper_cn.html
+/paper_en.html
