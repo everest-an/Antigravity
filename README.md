@@ -31,6 +31,8 @@
   Tesla 问题的最终回答。
 - [`experiments/`](./experiments/) —— 判决矩阵的数量级核算脚本（7 份，可复现，
   `py <script>.py` 运行），把每一行箭头换算成具体数字。
+- [`simulations/`](./simulations/) —— 理论模拟（3 份）：GIE 三模型歧视（量子引力 vs
+  Schrödinger–Newton vs LOCC）、电磁场→时空曲率（FFT 泊松解）、纠缠→几何玩具骨架。
 
 ## 核心方法论纪律
 
