@@ -1,3 +1,5 @@
 .codegraph/
 .omo/
 .playwright-mcp/
+__pycache__/
+*.pyc
