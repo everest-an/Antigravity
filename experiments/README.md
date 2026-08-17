@@ -26,6 +26,8 @@ py 05_kk_nuclear_clock.py
 | 05 | KK 分裂 vs 钍核钟巧合核查：反推所需耦合并对照轨道第五力约束 | Jusufi JCAP 2025, arXiv:2502.07613 |
 | 06 | 叠加质量源的读出：Einstein 环两档尺度；一切读出归约为同一引力相位 | Kaku-Nambu PRD 111, 046026；Moukouri arXiv:2409.19692 |
 | 07 | frame-dragging 相位：旋转源角动量扫描 vs 相位读出灵敏度 | Wakakuwa et al. arXiv:2606.31678；arXiv:2506.15014 |
+| 08 | 第五力约束全景：四个基准实验反推 α 约束 vs λ（第 13 行） | Panda Nature 631, 515 (2024)；Eöt-Wash；MICROSCOPE；LLR |
+| 09 | 真空能量正则化方案依赖：截断/ζ/维数正则三族答案 + 符号翻转（第 14 行） | Zhang-Ye arXiv:2411.03961 系列；Martin 2012 综述 |
 
 ## 方法论备注
 
