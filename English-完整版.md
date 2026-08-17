@@ -86,6 +86,8 @@ On the quantum side, matter-wave interference has now been demonstrated for sodi
 
 Two reorganizations close this part. The first observes that every interaction, electromagnetic or gravitational, ultimately controls a quantum phase: Aμ couples to phase directly, and gμν couples through proper time. The common language of unification may be phase, not force. The second introduces the Reality Stack, seven layers from observables down to an unknown fundamental structure, and the Level A–D evidence discipline that the rest of the paper uses: A for experimental fact, B for mature theory in untested regimes, C for mathematically self-consistent candidates, and D for the paper's own extrapolations. Within that discipline the central hypothesis can be stated safely: gravity is probably the wrong engineering variable.
 
+![Figure: The Reality Stack. Seven layers, the control stack, the measurement stack, and the unique-entry annotation on layer four.](figures/fig02_reality_stack.png)
+
 # Part IV — Mass, Inertia, and Tμν (condensed translation of Sections 69–75)
 
 Mass keeps three account books. The first belongs to the Higgs: W and Z masses through the Brout-Englert-Higgs mechanism, fermion masses through Yukawa couplings. The second belongs to QCD: lattice decompositions of the proton mass give roughly 9% to the quark mass term, 32–33% to quark kinetic energy, 36–37% to gluon field energy, and 23% to the trace anomaly. The Higgs seed of about one percent of the proton mass is amplified ninefold by the chiral condensate, and the remaining ninety-one percent is dynamics. The third book belongs to general relativity, which reads only the total stress-energy tensor and is indifferent to the decomposition.
