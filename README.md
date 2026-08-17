@@ -54,6 +54,9 @@
   概念论文/中文版）、时间线、阻塞项清单。
 - [`figures/`](./figures/) —— 投稿用图（5 幅，PNG+SVG，脚本可复现）：判决矩阵、
   Reality Stack、RT 极小面互验、第五力全景、GIE 歧视。
+- [`优先权检索记录.md`](./优先权检索记录.md) —— 严谨化附件 G：三个核心贡献的优先权
+  档案；关键发现——warp-drive no-go 文献（Bobrick–Martire、Barzegar 系）是本定理的
+  特殊情形（需声明差异），量子不等式实验地位存疑（Maclay–Davis 2019）。
 
 ## 核心方法论纪律
 
