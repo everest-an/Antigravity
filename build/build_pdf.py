@@ -102,7 +102,7 @@ def main():
     en_files = ["投稿-概念论文.md", "English-Submission-Blueprint.md"]
     en = render_md(
         en_files,
-        "Three Unifications: A Falsifiable Map of Spacetime Engineering",
+        "Three Unifications: A Falsifiable Map of the Quantum-Gravity Frontier",
         "From anti-gravity myths to the engineering of physical reality",
         "MuningAn · PlanetarySystem · 2026-08",
     )
