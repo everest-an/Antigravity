@@ -141,10 +141,13 @@ that a scientific claim is allowed to be.
 
 ---
 
-## Submission metadata (to be completed)
+## Submission metadata
 
+- Author: **MuningAn**
+- Institution: **PlanetarySystem**
 - Suggested venues: Nature Physics Perspective (pitch to editors); PRD/CQG/Foundations
   (framework paper); SHPSM (conceptual part only).
 - Length targets: Perspective 8–12 pages; framework paper 30–50 pages.
-- Required before submission: priority searches (three-unification classification;
-  lever-efficacy statement); author affiliation; AI-assistance disclosure per journal policy.
+- Required before submission: priority searches (three-unification classification —
+  see 附件 G, no prior found; lever-efficacy statement — warp-drive no-go literature
+  declared as special cases); AI-assistance disclosure per journal policy.
