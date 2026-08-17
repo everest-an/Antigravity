@@ -27,6 +27,8 @@ TYPST = _shutil.which("typst") or str(
 JOBS = [
     ("三种统一-中文版.typ", "三种统一-中文版.pdf"),
     ("Three-Unifications-英文版.typ", "Three-Unifications-英文版.pdf"),
+    ("三种统一之后-中文版.typ", "三种统一之后-中文版.pdf"),
+    ("核钟实验设计方案.typ", "核钟实验设计方案.pdf"),
 ]
 
 for src, dst in JOBS:

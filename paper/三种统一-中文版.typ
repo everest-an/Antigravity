@@ -1,5 +1,5 @@
 #set page(paper: "a4", margin: (x: 2.2cm, y: 2.4cm), numbering: "1 / 1")
-#set text(font: ("New Computer Modern", "SimSun"), size: 10.5pt, lang: "zh")
+#set text(font: ("New Computer Modern", "Noto Serif SC"), size: 10.5pt, lang: "zh")
 #set par(justify: true, first-line-indent: 2em, leading: 0.8em)
 #set heading(numbering: "1.1.1")
 #show heading.where(level: 1): it => [

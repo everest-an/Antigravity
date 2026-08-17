@@ -1,5 +1,5 @@
 #set page(paper: "a4", margin: (x: 2.2cm, y: 2.4cm), numbering: "1 / 1")
-#set text(font: "New Computer Modern", size: 10.5pt, lang: "en")
+#set text(font: ("New Computer Modern", "Noto Serif SC"), size: 10.5pt, lang: "en")
 #set par(justify: true, leading: 0.75em)
 #set heading(numbering: "1.1.1")
 #show heading.where(level: 1): it => [
@@ -176,7 +176,7 @@ The two pieces of evidence jointly delimit the concept: algebraic unification is
 (A3) *Channel closure:* $E$ introduces no interaction channel beyond the Standard Model.
 Then $E$ leaves the geodesic motion of every test particle in $(M, g)$ unchanged.
 
-*Proof.* The geodesic equation contains only the Christoffel symbols, which are determined by $g$. The metric $g$ is determined by the field equations from the sources of (A1) and the boundary conditions. Assumptions (A2) and (A3) preserve the equations and their solution. Hence the Christoffel symbols are unchanged, the equations of motion are unchanged, and their solutions are unchanged. ∎
+*Proof.* The geodesic equation contains only the Christoffel symbols, which are determined by $g$. The metric $g$ is determined by the field equations from the sources of (A1) and the boundary conditions. Assumptions (A2) and (A3) preserve the equations and their solution. Hence the Christoffel symbols are unchanged, the equations of motion are unchanged, and their solutions are unchanged. QED.
 
 The content of the theorem is the completeness of (A1)-(A3): they exhaust the control channels available inside general relativity plus the Standard Model. Violating (A1) is stress-energy engineering, which is energy engineering by another name. Violating (A2) is metric engineering, requiring exotic matter or modified gravity. Violating (A3) is new physics, bounded by the searches of Section 3.
 
