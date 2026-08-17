@@ -4,8 +4,10 @@
 
 ## 仓库状态
 
-- [`第1-28节-占位.md`](./第1-28节-占位.md) —— Tesla 反重力传说考证与早期统一场论史（原文在
-  此前会话，本文件为结构占位与交叉引用索引，**非正文**）
+- [`第1-28节.md`](./第1-28节.md) —— Tesla 反重力传说考证与早期统一场论史（全文）。
+  摘要、Tesla 可核验文本、Einstein 冲突、质量不是引力唯一源、旋转与 frame dragging、
+  惯性工程、反物质、负能量、虫洞、度规工程、超导体边界、类引力实验、
+  GIE 争论、时空涌现、五层级（力/惯性/场/度规/量子态工程）、Gravity Engineering Stack。
 - [`统一场量子现实与可编程时空.md`](./统一场量子现实与可编程时空.md) —— 第二十九至六十节。
   统一场论证实边界（电与磁/电弱/证据阶梯）、Connection vs Force、Holomorphic Unified Field
   Theory、大质量物质波干涉、GIE 争论、量子钟与 frame dragging、Phase/Action/Relation 视角、
