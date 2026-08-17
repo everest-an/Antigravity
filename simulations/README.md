@@ -9,9 +9,11 @@ experiments 回答"量级是多少"，simulations 回答"三模型/三理论在�
 py 01_gie_protocol.py
 py 02_em_field_curvature.py
 py 03_entanglement_geometry_toy.py
+py 04_frame_dragging_field.py
+py 05_tensor_network_rt.py
 ```
 
-依赖：numpy（01、03 需 scipy 级别矩阵运算；02 仅 numpy）。
+依赖：numpy（01、03、05 需矩阵运算；02、04 仅 numpy）。
 
 ## 内容与保真度
 
@@ -20,6 +22,8 @@ py 03_entanglement_geometry_toy.py
 | 01 | GIE 协议三模型歧视：量子引力 vs Schrödinger–Newton vs LOCC；负度/CHSH/有限统计 N(3σ) | 6/7 | 玩具精确（四维希尔伯特空间，精确分支相位） |
 | 02 | 电磁场 → 时空曲率：FFT 泊松解，含"压强也进 Tμν"的因子 2 | 3/17 | 高（线性化 GR 牛顿极限） |
 | 03 | 纠缠 → 几何玩具骨架：1D 自由费米子链面积律 | 18 | 示意性（非预言） |
+| 04 | 旋转质量 → frame-dragging 场：Lense-Thirring 进动，与 Gravity Probe B 校验 | 8/17 | 高（弱场精确式） |
+| 05 | 树张量网络中的 RT 极小面：等距树 + mincut 对照（连通/断开极小面转变） | 18 | 玩具精确（χ=4 有限键修正可见） |
 
 ## 关键结果
 
@@ -30,6 +34,12 @@ py 03_entanglement_geometry_toy.py
   要产生地球级引力需要 ~8 倍 Schwinger 极限的场强——真空在该处已不稳定。
 - **03**：1D 基态纠缠熵 S(l) 饱和（面积律骨架），说明"纠缠↔几何"对应在玩具层
   只给出骨架，真实宇宙断言仍是 Level C。
+- **04**：实验室转子的 frame-dragging 比地球小 ~10 个数量级；
+  地球场预测 1.6e-14 rad/s vs Gravity Probe B 实测 5.7e-15 rad/s——同数量级，
+  与 experiments/07 的相位缺口（~7 个数量级）自洽。
+- **05**：等距树网络中 S₂(A) ≈ mincut(A)·lnχ：半树(|A|=4)与相邻两叶(|A|=2)同属
+  mincut=1 类；远离两叶给出 ~2 倍熵（"断开的极小面"）——RT 机制在玩具层完整复现，
+  且 O(1/χ²) 有限键修正即"大 N 极限"的玩具对应。
 
 ## 方法论备注
 
