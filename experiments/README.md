@@ -24,6 +24,8 @@ py 05_kk_nuclear_clock.py
 | 03 | WEP 已实现梯级 + 原子干涉标度律 + 量子算符通道 | CSS 在轨 arXiv:2603.22981；MICROSCOPE 2022；Onofrio PRD 112, 124014 |
 | 04 | 引力 AB 边带：调制幅度、边带间距、与经典红移的等价性判读 | Chiao et al. PRD 109, 064073；IJMPD 33, 2441021 |
 | 05 | KK 分裂 vs 钍核钟巧合核查：反推所需耦合并对照轨道第五力约束 | Jusufi JCAP 2025, arXiv:2502.07613 |
+| 06 | 叠加质量源的读出：Einstein 环两档尺度；一切读出归约为同一引力相位 | Kaku-Nambu PRD 111, 046026；Moukouri arXiv:2409.19692 |
+| 07 | frame-dragging 相位：旋转源角动量扫描 vs 相位读出灵敏度 | Wakakuwa et al. arXiv:2606.31678；arXiv:2506.15014 |
 
 ## 方法论备注
 
