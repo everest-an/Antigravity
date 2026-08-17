@@ -4,8 +4,12 @@
 
 ## 仓库状态
 
-本仓库当前存放论文的最新两章（2026 修订轮）：
-
+- [`第1-28节-占位.md`](./第1-28节-占位.md) —— Tesla 反重力传说考证与早期统一场论史（原文在
+  此前会话，本文件为结构占位与交叉引用索引，**非正文**）
+- [`统一场量子现实与可编程时空.md`](./统一场量子现实与可编程时空.md) —— 第二十九至六十节。
+  统一场论证实边界（电与磁/电弱/证据阶梯）、Connection vs Force、Holomorphic Unified Field
+  Theory、大质量物质波干涉、GIE 争论、量子钟与 frame dragging、Phase/Action/Relation 视角、
+  Reality Stack、Level A–D 证据分级、中心假说 "Gravity is probably the wrong engineering variable"。
 - [`时空之前是什么.md`](./时空之前是什么.md) —— 第六十一至六十八节。
   连接三个前沿方向：double copy（代数式统一）、量子应力能量（⟨T̂μν⟩ 的失败与替代）、
   量子参考系与不定因果序（metric 是否基本变量），最终回答
@@ -26,17 +30,10 @@
 - [`experiments/`](./experiments/) —— 判决矩阵的数量级核算脚本（7 份，可复现，
   `py <script>.py` 运行），把每一行箭头换算成具体数字。
 
-## 论文结构（会话中已完成部分）
-
-- 第一至二十八节：Tesla 反重力传说考证与早期统一场论史（此前会话）
-- 第二十九至六十节：统一场论证实边界、电弱统一、规范连接、Holomorphic Unified
-  Field Theory、大质量物质波干涉、GIE 争论、量子钟与 frame dragging、
-  Reality Stack、证据分级（Level A–D）、张祥前体系技术拆解（此前会话）
-- 第六十一至六十八节：见本仓库文件
-
 ## 核心方法论纪律
 
 - 证据四级：A（实验事实）/ B（成熟理论未验证区）/ C（数学自洽候选）/ D（本文推演）
 - 箭头纪律：A 真、B 真，不代表 A⇒B 成立
 - 三种统一：转换式 / 几何式 / 代数式
 - 中心假说：Gravity is probably the wrong engineering variable
+  （最强形式：惯性也是错误变量，唯一入口是 Tμν）
