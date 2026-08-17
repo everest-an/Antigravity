@@ -11,9 +11,11 @@ py 02_em_field_curvature.py
 py 03_entanglement_geometry_toy.py
 py 04_frame_dragging_field.py
 py 05_tensor_network_rt.py
+py 06_gie_continuous_variable.py
+py 07_mera_rt.py
 ```
 
-依赖：numpy（01、03、05 需矩阵运算；02、04 仅 numpy）。
+依赖：numpy + scipy（全部）；QuTiP（06）；quimb（07）。
 
 ## 内容与保真度
 
@@ -24,6 +26,8 @@ py 05_tensor_network_rt.py
 | 03 | 纠缠 → 几何玩具骨架：1D 自由费米子链面积律 | 18 | 示意性（非预言） |
 | 04 | 旋转质量 → frame-dragging 场：Lense-Thirring 进动，与 Gravity Probe B 校验 | 8/17 | 高（弱场精确式） |
 | 05 | 树张量网络中的 RT 极小面：等距树 + mincut 对照（连通/断开极小面转变） | 18 | 玩具精确（χ=4 有限键修正可见） |
+| 06 | GIE 连续变量验证（QuTiP）：四分支相干态叠加 → qubit 抽象忠实性 + 真实参数退相干率 | 6/7 | 玩具精确；qubit 抽象误差 ~e^{-2α²} 被数值确认 |
+| 07 | MERA 中的 RT 极小面（quimb 原生）：与 05 独立实现互验 | 18 | 玩具精确（χ=2 有限键修正） |
 
 ## 关键结果
 
@@ -40,6 +44,11 @@ py 05_tensor_network_rt.py
 - **05**：等距树网络中 S₂(A) ≈ mincut(A)·lnχ：半树(|A|=4)与相邻两叶(|A|=2)同属
   mincut=1 类；远离两叶给出 ~2 倍熵（"断开的极小面"）——RT 机制在玩具层完整复现，
   且 O(1/χ²) 有限键修正即"大 N 极限"的玩具对应。
+- **06**：CV 负度在 α=2 时与 qubit 极限差 ~10⁻⁴（收敛 ∝ e^{-2α²}）——模拟 01 的
+  qubit 抽象被独立验证；真实参数（μm 叠加，α~10⁵–10⁸）的退相干率 Γ~10²–10¹¹ Hz：
+  QGEM 必须用自旋分支短脉冲协议，量化了噪声预算优先级的理由。
+- **07**：quimb 原生 MERA 与 05 的手写树两种独立实现给出同构结果——RT min-cut
+  机制的可复现性验证。
 
 ## 方法论备注
 
