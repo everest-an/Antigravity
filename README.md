@@ -57,6 +57,9 @@
 - [`优先权检索记录.md`](./优先权检索记录.md) —— 严谨化附件 G：三个核心贡献的优先权
   档案；关键发现——warp-drive no-go 文献（Bobrick–Martire、Barzegar 系）是本定理的
   特殊情形（需声明差异），量子不等式实验地位存疑（Maclay–Davis 2019）。
+- [`投稿-概念论文.md`](./投稿-概念论文.md) —— 投稿第 3 层：英文概念论文完整初稿
+  （按 nature-skills 的 nature-writing 工作流起草：review playbook 论证链、
+  摘要六步、claim-evidence map）。
 
 ## 核心方法论纪律
 
