@@ -98,12 +98,12 @@ def main():
     (ROOT / "paper_cn.html").write_text(cn, encoding="utf-8")
     print("paper_cn.html written, chars:", len(cn))
 
-    # 英文版：概念论文 + 投稿骨架
-    en_files = ["投稿-概念论文.md", "English-Submission-Blueprint.md"]
+    # 英文版：完整版（Part I 概念论文 + Parts II–VI 精译与形式装置）
+    en_files = ["English-完整版.md"]
     en = render_md(
         en_files,
         "Three Unifications: A Falsifiable Map of the Quantum-Gravity Frontier",
-        "From anti-gravity myths to the engineering of physical reality",
+        "Complete English Edition — from anti-gravity myths to the engineering of physical reality",
         "MuningAn · PlanetarySystem · 2026-08",
     )
     (ROOT / "paper_en.html").write_text(en, encoding="utf-8")
