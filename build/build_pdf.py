@@ -32,9 +32,13 @@ JOBS = [
     ("核钟实验设计方案.typ", "核钟实验设计方案.pdf"),
     ("Nuclear-Clock-Experiment-英文版.typ", "Nuclear-Clock-Experiment-英文版.pdf"),
     ("统一约束重推导-中文版.typ", "统一约束重推导-中文版.pdf"),
+    ("Unified-Constraints-Rederivation-英文版.typ", "Unified-Constraints-Rederivation-英文版.pdf"),
     ("引力控制通道分类定理-中文版.typ", "引力控制通道分类定理-中文版.pdf"),
+    ("Classification-Theorem-for-Gravitational-Control-英文版.typ", "Classification-Theorem-for-Gravitational-Control-英文版.pdf"),
     ("三种相同性-中文版.typ", "三种相同性-中文版.pdf"),
+    ("Three-Kinds-of-Sameness-英文版.typ", "Three-Kinds-of-Sameness-英文版.pdf"),
     ("GIE争论逻辑重建-中文版.typ", "GIE争论逻辑重建-中文版.pdf"),
+    ("GIE-Debate-Logic-Reconstruction-英文版.typ", "GIE-Debate-Logic-Reconstruction-英文版.pdf"),
 ]
 
 for src, dst in JOBS:
