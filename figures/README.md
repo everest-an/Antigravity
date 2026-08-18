@@ -13,7 +13,8 @@ py 04_fifth_force.py
 py 05_gie_discrimination.py
 py 06_reachability.py
 py 07_state_dependence.py
-py generate_en.py   # 英文标注版全套（en_fig01..07）
+py 08_quantum_state_resource.py
+py generate_en.py   # 英文标注版全套（en_fig01..08）
 ```
 
 依赖：matplotlib；fig03 调用 simulations/05、07，fig05 需 QuTiP。
@@ -30,6 +31,7 @@ py generate_en.py   # 英文标注版全套（en_fig01..07）
 | fig05 GIE 歧视 | (a) 三模型负度 vs φ；(b) CV 收敛 ∝ e^(−2α²) | simulations/01、06 |
 | fig06 核钟可达性 | 实验室 α_min(λ, τ) 曲线族 + 轨道极限 + 测距/MICROSCOPE 既有界 + 未排除窗口 | experiments/14（公式同源） |
 | fig07 态相关 EFT 界 | δα(Λ) 曲线族 vs 核钟可达性；交点位于 EFT 失效区（零背景证伪检验） | experiments/17（公式同源） |
+| fig08 态控制零背景 | 三类态控制检验的零背景间隙条形图（10.7/13.1/28.3 个数量级） | experiments/18（数据同源） |
 
 ## 字体与渲染备注
 

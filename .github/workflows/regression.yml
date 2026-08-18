@@ -18,11 +18,11 @@ jobs:
         run: |
           pip install numpy scipy matplotlib qutip quimb python-pptx
 
-      # 计算回归：23 个核算/模拟脚本（路径已重构为 pathlib 相对路径，CI 安全）
+      # 计算回归：24 个核算/模拟脚本（路径已重构为 pathlib 相对路径，CI 安全）
       - name: Run computations and simulations
         run: python run_all.py
 
-      # 图件套件（阶段 6.2 路径重构后纳入 CI）：5 幅中文图 + 可达性图 + 英文全套
+      # 图件套件（阶段 6.2 路径重构后纳入 CI）：7 幅中文图 + 英文全套
       - name: Build figures (CN + EN)
         run: |
           python figures/01_decision_matrix.py
@@ -33,7 +33,7 @@ jobs:
           python figures/06_reachability.py
           python figures/generate_en.py
 
-      # 论文编译：14 份 Typst → PDF（7 篇论文中英双版）
+      # 论文编译：16 份 Typst → PDF（8 篇论文中英双版）
       - uses: typst-community/setup-typst@v3
       - name: Compile papers
         run: python build/build_pdf.py

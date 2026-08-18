@@ -39,6 +39,8 @@ JOBS = [
     ("Three-Kinds-of-Sameness-英文版.typ", "Three-Kinds-of-Sameness-英文版.pdf"),
     ("GIE争论逻辑重建-中文版.typ", "GIE争论逻辑重建-中文版.pdf"),
     ("GIE-Debate-Logic-Reconstruction-英文版.typ", "GIE-Debate-Logic-Reconstruction-英文版.pdf"),
+    ("量子态作为控制变量-中文版.typ", "量子态作为控制变量-中文版.pdf"),
+    ("Quantum-States-as-Control-Variables-英文版.typ", "Quantum-States-as-Control-Variables-英文版.pdf"),
 ]
 
 for src, dst in JOBS:

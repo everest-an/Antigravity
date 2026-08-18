@@ -317,4 +317,24 @@ ax.grid(alpha=0.25, which="both")
 fig.savefig(str(FIG / "en_fig07_state_dependence.png"))
 plt.close(fig)
 
-print("english figures generated:", ", ".join(f"en_fig0{i+1}" for i in range(7)))
+# ---------------- fig08: quantum-state-control zero-background gaps ----------------
+labels8 = ["nuclear clock\n(Q distinguishes)", "GIE state control\n(e*a_B distinguishes)", "frame dragging\n(spin distinguishes)"]
+gaps8 = [10.7, 13.1, 28.3]
+colors8 = ["#2980b9", "#8e44ad", "#d35400"]
+fig, ax = plt.subplots(figsize=(9.5, 6))
+bars8 = ax.bar(labels8, gaps8, color=colors8, width=0.55, zorder=3)
+ax.axhline(0, color="#c0392b", lw=1.6, ls="--")
+ax.text(2.45, 1.2, "observability line (gap = 0)", fontsize=9, color="#c0392b", ha="right")
+for bar, g in zip(bars8, gaps8):
+    ax.text(bar.get_x() + bar.get_width() / 2, g + 0.9, f"{g:.0f} orders",
+            ha="center", va="bottom", fontsize=10, fontweight="bold", color="#333")
+ax.set_ylabel("zero-background gap (orders of magnitude, log)", fontsize=11)
+ax.set_ylim(0, 33)
+ax.set_title("Quantum-state-control tests: all three are zero-background in the class of\nweakly coupled local EFTs (any observable state-dependent signal falsifies GR + standard KK + all local EFTs)", fontsize=12)
+ax.grid(alpha=0.25, axis="y")
+for s in ["top", "right"]:
+    ax.spines[s].set_visible(False)
+fig.savefig(str(FIG / "en_fig08_quantum_state_resource.png"))
+plt.close(fig)
+
+print("english figures generated:", ", ".join(f"en_fig0{i+1}" for i in range(8)))
