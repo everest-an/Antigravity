@@ -2,15 +2,23 @@
 
 《从特斯拉到时空工程》——统一场、量子现实与可编程时空。
 
-## 正式论文（投稿格式，中英双语）
+## 正式论文（投稿格式，中英双语，9 篇 × 2 = 18 份 PDF）
 
-- [`论文-中文版.md`](./论文-中文版.md) —— 《三种统一：量子引力前沿的一张可证伪地图》
-  （摘要/关键词/十节正文/30 条参考文献/图 6 幅/作者贡献/数据可用性）
-- [`论文-英文版.md`](./论文-英文版.md) —— Three Unifications: A Falsifiable Map of the
-  Quantum-Gravity Frontier（同构英文版）
-- PDF：`build/三种统一-中文版.pdf`、`build/Three-Unifications-英文版.pdf`
-  （`py build\build_pdf.py` 一键重新生成）
-- 汇报版：`ppt/从特斯拉到时空工程-汇报.pptx`（15 页，图 5 幅 + 表 5 张 + 演讲备注）
+| # | 论文 | PDF（`build/`） | 定位 |
+|---|---|---|---|
+| 1 | 三种统一 / Three Unifications | 三种统一-中文版.pdf / Three-Unifications-英文版.pdf | 地图（总纲） |
+| 2 | 三种统一之后 / Beyond Three Unifications | 三种统一之后-中文版.pdf / Beyond-Three-Unifications-英文版.pdf | 三出口 + 候选原理 |
+| 3 | 核钟实验设计方案 v2.0 / Nuclear-Clock Experiment v2.0 | 核钟实验设计方案.pdf / Nuclear-Clock-Experiment-英文版.pdf | 实验设计（实验室+轨道双配置） |
+| 4 | 统一约束重推导 / Unified Constraints Rederivation（E1） | 统一约束重推导-中文版.pdf / Unified-Constraints-Rederivation-英文版.pdf | 21 行 × 脚本锚点 |
+| 5 | 引力控制通道分类定理 / Classification Theorem（T2，含推论 4） | 引力控制通道分类定理-中文版.pdf / Classification-Theorem-for-Gravitational-Control-英文版.pdf | 分类 + 零背景预言（PRD 形态） |
+| 6 | 三种相同性 / Three Kinds of Sameness（T1） | 三种相同性-中文版.pdf / Three-Kinds-of-Sameness-英文版.pdf | De Haro-Butterfield 2025 对话稿（SHPSM 形态） |
+| 7 | GIE 争论逻辑重建 / GIE Debate Reconstruction（E3） | GIE争论逻辑重建-中文版.pdf / GIE-Debate-Logic-Reconstruction-英文版.pdf | 六命题分离 |
+| 8 | 量子态作为控制变量 / Quantum States as Control Variables（E5） | 量子态作为控制变量-中文版.pdf / Quantum-States-as-Control-Variables-英文版.pdf | 统一零背景定理 |
+| 9 | 三个出口的分流协议 / Triage Protocol（E6） | 三个出口的分流协议-中文版.pdf / Triage-Protocol-for-the-Three-Exits-英文版.pdf | 阳性分支归属协议 |
+
+- 源文件：`paper/*.typ`（Typst），`py build\build_pdf.py` 一键重编译全部 18 份 PDF。
+- 原始长文：`论文-中文版.md` / `论文-英文版.md`（90 节全稿的投稿化改写，v1）。
+- 汇报版：`ppt/从特斯拉到时空工程-汇报.pptx`（18 页，含 R2/R3/E5/E6 新成果 + 演讲备注）。
 
 ## 工作文档（90 节全稿与严谨化附件）
 

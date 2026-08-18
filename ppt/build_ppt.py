@@ -145,7 +145,7 @@ add_text(s, Inches(1.2), Inches(4.6), Inches(11), Inches(0.6),
          [("作者 MuningAn · 机构 PlanetarySystem · 2026", 15, False, RGBColor(0x99, 0x99, 0xAA))],
          PP_ALIGN.CENTER)
 add_text(s, Inches(1.2), Inches(5.4), Inches(11), Inches(0.6),
-         [("90 节全稿 + 19 行判决矩阵 + 16 份可复现脚本 · github.com/everest-an/Antigravity",
+         [("90 节全稿 + 19 行判决矩阵 + 26 份可复现脚本 · 9 篇论文中英双版 · github.com/everest-an/Antigravity",
            13, False, RGBColor(0x88, 0x88, 0x99))], PP_ALIGN.CENTER)
 add_notes(s, "开场：一句话定位。这不是一篇'特斯拉有没有反重力'的考证文，而是一张把'统一/反重力'所有说法变成可检验命题的地图。今天汇报按证据地图展开：为什么现在重要、三个主题、争议、判决矩阵、未来方向。")
 
@@ -312,13 +312,64 @@ add_text(s, Inches(0.55), Inches(5.7), Inches(12.2), Inches(1.1), [
     ("推论 2（杠杆效力）：质量分解的每一成分作为引力工程杠杆的效力 = ∂Tμν/∂该成分——改 Higgs 只动 ~9% 的质子质量项，改 QCD 动 ~91%，改'真空'在定义层失败。",
      14, True, ACCENT),
     ("推论 3：超材料负有效质量是色散关系工程，不改 Tμν——与引力无关。", 14, True, ACCENT),
+    ("推论 4（新增）：态相关耦合的 EFT 上界 δα ≈ 5.4×10⁻²²——核钟态相关搜索是零背景证伪检验（下页）。", 14, True, GREEN),
 ])
 add_footer(s, "来源：核心命题-形式化.md", 10)
 add_notes(s, "定理本身近乎同义反复——价值在假设的完备性：(A1)(A2)(A3) 穷尽 GR 内所有控制通道。推论 2 是最接近原创的单个命题。诚实声明：这是分类性陈述，不是新现象预言。")
 
-# ================= Slide 11: 可复现性 =================
+# ================= Slide 11: 推论 4 零背景 =================
 s = new_slide()
-add_title(s, "可复现性：每个箭头都有数字", "11")
+add_title(s, "推论 4：态相关耦合的 EFT 上界", "11")
+add_text(s, Inches(0.55), Inches(1.3), Inches(6.6), Inches(5.4), [
+    ("问题：核钟进阶阶段用微波调控核内部态，检验 Yukawa 耦合是否态相关——信号可能多大？", 15, True, DARK),
+    ("EFT 答案（dim-6 功率计数）：", 14, False, DARK),
+    ("δα = √α · Q · M_Pl / (Λ² λ² m_Th)", 14, False, BLUE),
+    ("取 α=10⁻⁶、Λ=10 TeV、λ=1 m：δα ≈ 5.4×10⁻²²", 14, True, ACCENT),
+    ("核钟 5σ 可达性 2.9×10⁻¹¹——EFT 上界低 10.7 个数量级。", 14, False, DARK),
+    ("可观测性要求截断 Λ ≲ 43 MeV——落入 EFT 失效区（QCD 尺度以下）。", 14, False, DARK),
+    ("结论：态相关搜索是零背景证伪检验——任何可观测信号同时证伪 GR、标准 KK 与一切弱耦合局域 EFT。", 14, True, GREEN),
+])
+add_pic(s, "fig07_state_dependence.png", Inches(7.5), Inches(1.35), w=Inches(5.3))
+add_footer(s, "图 7：态相关耦合 EFT 界（experiments/17 生成）", 11)
+add_notes(s, "这是把 T2 从分类定理升为'分类+可证伪预言'的关键一步：δα 是别人没算过的新数字。交点落在 EFT 失效区是图 7 的核心视觉信息。")
+
+# ================= Slide 12: E5 统一零背景定理 =================
+s = new_slide()
+add_title(s, "E5：量子态作为控制变量的统一零背景定理", "12")
+add_text(s, Inches(0.55), Inches(1.3), Inches(6.4), Inches(5.4), [
+    ("三类态控制检验共用一条 dim-6 功率计数：", 15, True, DARK),
+    ("· 有质量中介：δα/α = ⟨O⟩·M_Pl/(√α·Λ²·λ²·m)", 13, False, BLUE),
+    ("· 无质量引力子：δG/G = ⟨O⟩·M_Pl²/(Λ²·d²·M_src·m)", 13, False, BLUE),
+    ("三实例的零背景间隙：", 14, False, DARK),
+    ("· 核钟态相关：10.7 个数量级（Q 区分）", 13, False, DARK),
+    ("· GIE 内态控制：13.1 个数量级（e·a_B 区分）", 13, False, DARK),
+    ("· frame dragging：28.3 个数量级（自旋区分）", 13, False, DARK),
+    ("推论：任何可观测态相关信号 → 强耦合/非局域/态荷三种出口之一。", 14, True, ACCENT),
+    ("判决矩阵新增'态控制列'：有内部态区分的行自动获得零背景检验。", 14, True, GREEN),
+])
+add_pic(s, "fig08_quantum_state_resource.png", Inches(7.2), Inches(1.5), w=Inches(5.6))
+add_footer(s, "图 8：三检验零背景间隙（experiments/18 生成）", 12)
+add_notes(s, "统一框架的价值：三个零散实验想法（核钟进阶、GIE 升级、自旋分辨）被同一条定理覆盖。这是'从测引力到测引力的态相关性'的升级。")
+
+# ================= Slide 13: E6 三出口分流协议 =================
+s = new_slide()
+add_title(s, "E6：三个出口的分流协议", "13")
+add_text(s, Inches(0.55), Inches(1.3), Inches(6.6), Inches(5.4), [
+    ("若真测到态相关信号，三步判别其归属：", 15, True, DARK),
+    ("① 形状拟合（扩展近距 0.02~0.5 m）：单 vs 双指数 → 非局域（Δχ²>4）", 13, False, DARK),
+    ("② 多探针比值（8.36 eV / 76.7 eV / keV / MeV）：偏离 ~E/Λ → 强耦合（MeV 探针 2%）", 13, False, DARK),
+    ("③ m 扫描模式：线性/平方 → 态荷（模式互不重叠）", 13, False, DARK),
+    ("关键发现：第二尺度只在 r<λ₂ 有形状信息——标准扫描对 β=0.1 混合失明，扩展扫描立即判别（β_min≈0.10）。", 13, True, ACCENT),
+    ("反向自检：三步全零 = 系统误差（协议双向安全：真信号必被归属，假信号必被暴露）。", 14, True, GREEN),
+    ("配套硬件建议：位移台近距扫描从 0.15 m 延伸到 0.02 m。", 13, False, BLUE),
+])
+add_pic(s, "fig09_exit_triage.png", Inches(7.5), Inches(1.2), w=Inches(5.4))
+add_footer(s, "图 9：三出口分流决策树（experiments/19 生成）", 13)
+add_notes(s, "这是判决矩阵的阳性分支：矩阵管'哪个箭头成立'，协议管'成立之后指向哪里'。合成数据逼出的近距扩展是硬结论。")
+
+# ================= Slide 14: 可复现性 =================
+s = new_slide()
+add_title(s, "可复现性：每个箭头都有数字", "14")
 rows = [
     ["箭头", "关键数字", "含义"],
     ["GIE 纠缠相位", "φ = 0.217 rad（基准）vs 10⁻⁶~10⁻⁵（芯片参数）", "3σ 认证从 200 次 → 10⁹–10²¹ 次"],
@@ -330,16 +381,16 @@ rows = [
 add_table(s, rows, Inches(0.55), Inches(1.4), Inches(12.2), Inches(3.9),
           col_widths=[Inches(2.6), Inches(5.4), Inches(4.2)], font_size=13)
 add_text(s, Inches(0.55), Inches(5.6), Inches(12.2), Inches(1.0), [
-    ("16 份脚本（9 核算 + 7 模拟）全部通过；两张关键图（判决矩阵、第五力全景）直接由脚本生成。",
+    ("26 份脚本（19 核算 + 7 模拟）全部通过；四张关键图（判决矩阵、第五力全景、态相关 EFT 界、零背景间隙）直接由脚本生成。",
      14, True, DARK),
     ("'核算之前和之后，一条箭头是两个不同的对象'——论文的全部方法论就是把箭头变成可称量的对象。", 14, True, BLUE),
 ])
-add_footer(s, "来源：experiments/ 与 simulations/ 全部脚本", 11)
+add_footer(s, "来源：experiments/ 与 simulations/ 全部脚本", 14)
 add_notes(s, "逐行读表，强调每个数字对应一个判决矩阵行。Céleri 的'装置反冲'是 2026 年新约束，说明叠加制备的极限不只是环境退相干。")
 
-# ================= Slide 12: RT 极小面 =================
+# ================= Slide 15: RT 极小面 =================
 s = new_slide()
-add_title(s, "纠缠 → 几何：RT 极小面的玩具实现", "12")
+add_title(s, "纠缠 → 几何：RT 极小面的玩具实现", "15")
 add_pic(s, "fig03_rt_mincut.png", Inches(1.6), Inches(1.3), w=Inches(7.2))
 add_text(s, Inches(9.1), Inches(1.5), Inches(3.7), Inches(4.6), [
     ("等距树张量网络中：", 14, True, DARK),
@@ -350,12 +401,12 @@ add_text(s, Inches(9.1), Inches(1.5), Inches(3.7), Inches(4.6), [
     ("· O(1/χ²) 有限键修正 = 大 N 极限的玩具对应", 12, False, DARK),
     ("保真度声明：机制演示，不是'真实宇宙由张量网络构成'的证据（判决矩阵第 18 行，C 级）。", 12, True, ACCENT),
 ])
-add_footer(s, "图 3：RT 极小面互验（模拟 05/07）", 12)
+add_footer(s, "图 3：RT 极小面互验（模拟 05/07）", 15)
 add_notes(s, "这是第 18 行'纠缠→几何'的玩具骨架。强调边界：全息对偶内部是严格的，对真实宇宙仍是 C 级假说。")
 
-# ================= Slide 13: 未来方向 =================
+# ================= Slide 16: 未来方向 =================
 s = new_slide()
-add_title(s, "未来方向：近 / 中 / 远期行动清单", "13")
+add_title(s, "未来方向：近 / 中 / 远期行动清单", "16")
 cols = [
     ("近期 3–5 年", GREEN, [
         "GQuEST 首轮数据（第 15 行）",
@@ -384,10 +435,10 @@ for i, (head, color, items) in enumerate(cols):
     add_text(s, x + Inches(0.12), Inches(1.4), Inches(3.7), Inches(0.5), [(head, 15, True, color)])
     lines = [(("· " + it), 11.5, False, DARK) for it in items]
     add_text(s, x + Inches(0.12), Inches(1.95), Inches(3.7), Inches(4.2), lines)
-add_footer(s, "来源：物理现实的工程学边界.md 第八十八节（12 条行动清单）", 13)
+add_footer(s, "来源：物理现实的工程学边界.md 第八十八节（12 条行动清单）", 16)
 add_notes(s, "每一条都有判决对象和时间尺度——这就是'路线图'与'愿望清单'的区别。重点提 QGEM 首轮与核钟，它们是最可能改变矩阵的两条。")
 
-# ================= Slide 14: 总结 =================
+# ================= Slide 17: 总结 =================
 s = new_slide()
 dark_bg(s)
 add_text(s, Inches(1.2), Inches(1.1), Inches(11), Inches(0.7),
@@ -402,26 +453,26 @@ for i, (head, body) in enumerate(layers):
     add_text(s, Inches(1.5), y, Inches(1.6), Inches(0.6), [(head, 17, True, ACCENT)])
     add_text(s, Inches(3.2), y, Inches(8.7), Inches(1.2), [(body, 14, False, WHITE)])
 add_text(s, Inches(1.2), Inches(6.35), Inches(11), Inches(0.6), [
-    ("反重力如果存在，不会是一台抵抗引力的机器——而地图的第一步已经完成：19 行，16 份脚本，全部可复现。",
+    ("反重力如果存在，不会是一台抵抗引力的机器——而地图的第一步已经完成：19 行，26 份脚本，9 篇论文中英双版，全部可复现。",
      15, True, RGBColor(0xF5, 0xC6, 0x42))], PP_ALIGN.CENTER)
-add_footer(s, "", 14)
+add_footer(s, "", 17)
 add_notes(s, "收束：三层命题是全文的压缩。最后一句点出'地图是交付物'——本论文不预言新现象，它把模糊野心变成可检验命题。")
 
-# ================= Slide 15: 参考文献与代码 =================
+# ================= Slide 18: 参考文献与代码 =================
 s = new_slide()
-add_title(s, "参考文献与代码", "15")
+add_title(s, "参考文献与代码", "18")
 add_text(s, Inches(0.55), Inches(1.35), Inches(12.2), Inches(4.6), [
     ("全部可复现资产：github.com/everest-an/Antigravity", 16, True, DARK),
-    ("· 论文全稿：90 节 + 严谨化附件 A–G（中英双语，PDF 版在 build/ 目录）", 13, False, DARK),
-    ("· 核算 9 份 + 模拟 7 份（run_all.py 一键全跑，0 失败）", 13, False, DARK),
-    ("· 投稿图 5 幅（PNG + SVG，脚本生成）", 13, False, DARK),
+    ("· 论文 9 篇中英双版（18 份 PDF）：三种统一 / 三种统一之后 / 核钟实验设计 v2.0 / 统一约束重推导 / 分类定理（含推论 4）/ 三种相同性（SHPSM 对话稿）/ GIE 逻辑重建 / 态控制零背景定理 / 三出口分流协议", 12, False, DARK),
+    ("· 核算 19 份 + 模拟 7 份（run_all.py 一键全跑，test_all.py 38 项 0 失败）", 13, False, DARK),
+    ("· 投稿图 9 幅中英双版（PNG + SVG，脚本生成，CI 自动回归）", 13, False, DARK),
     ("· 参考文献总表 ~110 条（含预印本/同行评议状态标注）", 13, False, DARK),
     ("", 6, False, DARK),
-    ("核心文献：Bose et al. PRL 2017 · Fedida–Kent PRD 2025 · Salzger–Vilasini arXiv:2605.08351 · GQuEST PRX 2025 · Derevianko et al. Colloquium 2026 · Bobrick–Martire CQG 2021 · Barzegar et al. arXiv:2602.16495", 11.5, False, GRAY),
+    ("核心文献：Bose et al. PRL 2017 · Fedida–Kent PRD 2025 · Salzger–Vilasini arXiv:2605.08351 · GQuEST PRX 2025 · Derevianko et al. Colloquium 2026 · Bobrick–Martire CQG 2021 · Barzegar et al. arXiv:2602.16495 · De Haro–Butterfield 2025 专著", 10.5, False, GRAY),
     ("", 6, False, DARK),
     ("致谢：本汇报按 nature-skills（Yuan1z0825）的 nature-paper2ppt 工作流生成。", 11, False, GRAY),
 ])
-add_footer(s, "", 15)
+add_footer(s, "", 18)
 add_notes(s, "收尾页。留时间回答提问：最常见的问题是'这是不是反重力论文'——回答：不是，这是关于'为什么反重力说法全部失败以及真正开放的问题在哪里'的地图。")
 
 OUT.mkdir(exist_ok=True)
