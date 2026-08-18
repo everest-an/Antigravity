@@ -28,7 +28,9 @@ JOBS = [
     ("三种统一-中文版.typ", "三种统一-中文版.pdf"),
     ("Three-Unifications-英文版.typ", "Three-Unifications-英文版.pdf"),
     ("三种统一之后-中文版.typ", "三种统一之后-中文版.pdf"),
+    ("Beyond-Three-Unifications-英文版.typ", "Beyond-Three-Unifications-英文版.pdf"),
     ("核钟实验设计方案.typ", "核钟实验设计方案.pdf"),
+    ("Nuclear-Clock-Experiment-英文版.typ", "Nuclear-Clock-Experiment-英文版.pdf"),
 ]
 
 for src, dst in JOBS:
