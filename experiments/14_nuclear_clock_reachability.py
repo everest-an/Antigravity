@@ -83,7 +83,8 @@ def main():
                header="lambda_m,alpha_min_proj_tau1e6", comments="")
     print(f"\n[5] 数据已存 build/reachability_lab.csv；")
     print(f"    结论：实验室配置在投影稳定度下 α_min ~ 1e-12（τ=1e6s），")
-    print(f"    轨道配置 α_min ~ 1e-18——轨道深 6 个数量级但需搭载机会。")
+    print(f"    轨道配置 α_min ~ 1.4e-25（同投影稳定度）——轨道信号系数大 2.9e13 倍，")
+    print(f"    可达深度比实验室多 13 个数量级，但需搭载机会。")
 
 if __name__ == "__main__":
     main()

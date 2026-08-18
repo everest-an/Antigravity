@@ -5,10 +5,10 @@ test_all.py —— 全量回归测试（计算 / 图 / 论文 / 幻灯片）
 用法：py test_all.py
 
 覆盖：
-  1. experiments/  9 份数量级核算
+  1. experiments/  16 份数量级核算（含 E2 包：14 可达性、15 MICROSCOPE、16 信号模拟器）
   2. simulations/  7 份模拟（含 QuTiP、quimb）
   3. figures/      5 幅中文图 + 5 幅英文图
-  4. paper/        4 份正式论文（Typst → PDF）
+  4. paper/        7 份论文中英双版（14 个 Typst → PDF）
   5. ppt/          汇报幻灯片（15 页）
 
 退出码：0 = 全部通过；1 = 存在失败。

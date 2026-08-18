@@ -22,30 +22,28 @@
 #align(center)[
   #text(size: 16pt, weight: "bold")[Testing Additional Gravitational Degrees of Freedom with the Th-229 Nuclear Clock]
   #v(0.4em)
-  #text(size: 12pt)[An experimental design (Route B: verify first, engineer later)]
+  #text(size: 12pt)[A dual-configuration experimental design (laboratory + orbital) · Route B: verify first, engineer later]
   #v(0.4em)
-  #text(size: 11pt)[MuningAn · PlanetarySystem · 2026-08 · Version 1.0 (for experimental collaborations)]
+  #text(size: 11pt)[MuningAn · PlanetarySystem · 2026-08 · Version 2.0 (corrected dual-configuration edition)]
 ]
 
 #par(justify: true)[
-*Abstract*　The goal of this design is not an "anti-gravity prototype" but a test of whether gravity possesses controllable additional degrees of freedom. The Th-229 nuclear clock is the core instrument, measuring the gravitational modulation of the isomer transition frequency on an elliptical orbit. Classical general relativity fixes the baseline (a fractional modulation of $1.3 times 10^(-11)$); a Kaluza-Klein extra dimension superimposes $Delta E approx 2.8 alpha "eV"$, where $alpha$ is the coupling of the lightest extra mode. At the target fractional stability of $10^(-18)$, the experiment reaches $alpha$ down to $3 times 10^(-18)$ for ranges $lambda > 10^7 "m"$, about three orders beyond current orbital bounds. The design proceeds in two phases: Phase 1 establishes the classical baseline and eliminates systematics; Phase 2 searches for the deviation and pins or opens the window. An advanced phase actively controls the nuclear spin state to test whether the coupling is state-dependent. This document provides the parameter tables, expected signal magnitudes, systematic-error budget, and verdict formulas. A null result carries publication value by itself: $alpha < 10^(-17)$ is a PRL-grade constraint.
+*Abstract*　This design uses the Th-229 nuclear clock to test whether gravity possesses controllable additional degrees of freedom, strictly framed as "searching for the Yukawa correction of compact extra dimensions"—never as "measuring anti-gravity". Two configurations are specified. *Laboratory*: a 100 kg movable tungsten source gives a signal coefficient of $9.5 times 10^(-14) alpha "eV"$ ($Delta f = 23 alpha "Hz"$)—thirteen orders below the orbital coefficient, yet at the projected spinless-host stability ($4.6 times 10^(-23)/sqrt(tau)$) it reaches $alpha_"min" approx 7 times 10^(-12)$ at $tau = 10^6 "s"$ ($lambda ~ 10^7 "m"$), five to six orders deeper than Eöt-Wash at laboratory scales. The survival window is $alpha in [10^(-12), 10^(-6)]$ (the lower segment being the newly covered region; $[10^(-6), 10^(-5)]$ is already excluded by Eöt-Wash). *Orbital*: the Earth as source gives $2.8 alpha "eV"$, reaching $alpha_"min" ~ 10^(-25)$ at the same projected stability ($tau = 10^6 "s"$), subject to a flight opportunity. The two-phase flow: Phase 1 establishes the first laboratory-mass nuclear-clock gravitational-redshift measurement and the full error budget; Phase 2 fits the Yukawa residual. A signal is accepted only under three conditions (systematics excluded; parameters inside the unexcluded window; linear scaling with source mass). An advanced phase applies microwave control of the nuclear internal state to test whether the coupling is state-dependent—the prerequisite principle test on the road to gravitational engineering. A null result carries independent constraint value; the noise budget, publication paths, and limitations are stated explicitly.
 
-*Keywords*　Th-229; nuclear clock; Kaluza-Klein; gravitational Aharonov-Bohm; equivalence principle; precision metrology
+*Version note*: v1.0 misapplied the orbital coefficient ($2.8 alpha "eV"$) to a laboratory source, overestimating the laboratory signal by about seven orders of magnitude; all laboratory numbers are corrected in v2.0.
+
+*Keywords*　Th-229; nuclear clock; Kaluza-Klein; fifth force; gravitational Aharonov-Bohm; precision metrology
 ]
 
 #pagebreak()
 
-= Scientific positioning and goals
+= Scientific positioning and expression discipline
 
-*Positioning*: this experiment belongs to the established frontier of "testing the fundamental properties of gravity and exploring their controllability"; it is not the development of an "anti-gravity device". Expression discipline: in review and defense settings, use "tests of additional gravitational degrees of freedom", never "anti-gravity" as the experimental goal.
+*Main goal*: use the extreme frequency stability of the Th-229 nuclear clock to measure the nuclear-transition frequency shift induced by gravitational-potential variations, searching for the Yukawa-type gravitational correction from the lightest Kaluza-Klein mode.
 
-*Goals, layered*:
+*Secondary goals*: (1) update the experimental constraint on the coupling $alpha$-range $lambda$ parameter plane; (2) test whether the gravitational coupling can be modulated by internal quantum degrees of freedom of the nucleus (a prerequisite for gravitational engineering).
 
-- *Goal 1 (mandatory)*: the first nuclear-transition measurement of the gravitational redshift / gravitational Aharonov-Bohm effect, establishing the classical baseline.
-- *Goal 2 (mandatory)*: a constraint or a signal on $alpha$ in the neV window, pinning or opening the Kaluza-Klein parameter space.
-- *Goal 3 (optional, advanced)*: active control of the nuclear spin state, testing whether the gravitational coupling is state-dependent. A positive result would simultaneously falsify general relativity and standard Kaluza-Klein, pointing to a new coupling channel.
-
-*Null-result value*: a null result for Goal 2 yields $alpha < 10^(-17)$-level constraints, two orders beyond current orbital bounds, independently publishable at PRL / Nature Physics level.
+*Expression discipline (mandatory in papers and group communication)*: this experiment does not directly demonstrate anti-gravity. A nonzero, modulable $alpha$ would mean that gravity possesses new degrees of freedom accessible to engineering, providing the physical basis for later manipulation research. Always say "tests of additional gravitational degrees of freedom", never "anti-gravity device".
 
 = Physics and window position
 
@@ -55,44 +53,70 @@ The lightest graviton mode of an extra compact dimension contributes a Yukawa co
 
 $ V(r) = - (G m_1 m_2)/(r) (1 + alpha e^(-r/lambda)), $ <eq-kk>
 
-with $alpha$ the coupling relative to standard gravity and $lambda$ the Compton range. A quantum system in free fall around a gravitating body acquires a splitting
+with $alpha$ the coupling relative to standard gravity and $lambda$ the Compton range. A nuclear system in the field of a source mass acquires a splitting
 
 $ Delta E = m_"sys" alpha Delta Phi(r, lambda), $ <eq-ab>
 
-with $Delta Phi$ the peak-to-peak potential variation. For the thorium nucleus ($m_"Th" approx 3.8 times 10^(-25) "kg"$) on a low Earth orbit (altitude 400 km, eccentricity 0.01), $Delta Phi approx 2 g a e approx 1.18 times 10^6 "m"^2/"s"^2$ (classical part), hence
+where $Delta Phi$ is the gravitational-potential variation produced by moving the source, and $m_"sys" approx 3.8 times 10^(-25) "kg"$ is the effective thorium-nucleus mass.
 
-$ Delta E approx 2.8 alpha "eV". $ <eq-signal>
+== The v1.0 $arrow.r$ v2.0 correction
 
-== Window position
+The numerical value of $Delta Phi$ in Eq. @eq-ab depends on the source. *Key correction relative to v1.0*: the earlier version applied the orbital figure ($Delta Phi approx 1.18 times 10^6 "m"^2/"s"^2$, Earth as source) to a laboratory source. A 100 kg tungsten block moved from $r_1 = 0.15 "m"$ to $r_2 = 1.5 "m"$ actually produces
 
-Inverting Eq. @eq-ab against history: electronvolt splittings for nuclear systems require $alpha approx 0.4$, excluded by seven to eight orders of magnitude; millielectronvolt splittings require $alpha approx 10^(-3)$, equally excluded. The allowed window therefore sits at neV and below. Eq. @eq-signal shows that the current orbital bound $alpha ~ 10^(-15)$ corresponds to $Delta E ~ 3 "feV"$, precisely inside the reach of the target nuclear-clock sensitivity. That is the window position: *not "signal or no signal", but "who fills the three orders of magnitude between the existing bound and the clock sensitivity first"*.
+$ Delta Phi = G M (1/r_1 - 1/r_2) approx 4.0 times 10^(-8) "m"^2/"s"^2, $ <eq-labphi>
 
-== Classical baseline
+so the laboratory signal coefficient is
 
-The classical gravitational-redshift modulation is the peak-to-peak orbital potential variation:
+$ (Delta E)/(alpha) = m_"Th" Delta Phi approx 9.5 times 10^(-14) "eV", quad (Delta f)/(alpha) = (Delta E)/(h alpha) approx 23 "Hz". $ <eq-labsig>
 
-$ (Delta nu)/(nu) = (Delta Phi)/(c^2) approx 1.31 times 10^(-11), $ <eq-baseline>
+The v1.0 claim "a $Delta E in [0.1, 10] "neV"$ laboratory signal" would have required $alpha = 330 ~ 3.3 times 10^4$, excluded by Eöt-Wash at laboratory scales by seven to nine orders of magnitude—landing exactly in the already-excluded parameter region that the expression discipline forbids. All laboratory numbers in v2.0 follow Eqs. @eq-labphi and @eq-labsig.
 
-at the orbital frequency $f_"orb" approx 1.80 times 10^(-4) "Hz"$. Numerically this baseline equals the classical redshift variation (the reading of the gravitational Aharonov-Bohm effect); it serves three purposes: a systematics target, a general-relativity test with a nuclear clock, and the reference for Phase-2 signal subtraction.
+== Laboratory configuration
+
+$ Delta E(alpha) = 9.5 times 10^(-14) alpha "eV"$, equivalently $Delta f = 23 alpha "Hz"$.
+
+- *Newly covered region*: $alpha in [10^(-12), 10^(-6)]$—below $10^(-6)$ is uncovered by Eöt-Wash; this is the experiment's true target.
+- *Excluded region*: $alpha > 10^(-6)$ (Eöt-Wash at $lambda ~ 10^(-2) ~ 10^(-1) "m"$).
+- *Sensitivity*: at the projected stability $4.6 times 10^(-23)/sqrt(tau)$: $alpha_"min" approx 7 times 10^(-11)$ at $tau = 10^4 "s"$, and $approx 7 times 10^(-12)$ at $tau = 10^6 "s"$ (both at $lambda ~ 10^7 "m"$).
+- *Frequency scale*: the corresponding shifts are $Delta f in [10^(-10), 10^(-5)] "Hz"$—sub-nanohertz to microhertz, all below the resolution of the current kHz-linewidth platforms. *The experiment is feasible only after a spinless host reaches the projected stability.*
+
+== Orbital configuration (retained from v1.0)
+
+With the Earth as source (low Earth orbit, altitude 400 km, $e = 0.01$), $Delta Phi approx 2 g a e approx 1.18 times 10^6 "m"^2/"s"^2$, hence
+
+$ Delta E approx 2.8 alpha "eV", $ <eq-signal>
+
+with the classical fractional baseline modulation
+
+$ (Delta nu)/(nu) = (Delta Phi)/(c^2) approx 1.31 times 10^(-11) $ <eq-baseline>
+
+at the orbital frequency $f_"orb" approx 1.80 times 10^(-4) "Hz"$. Inverting Eq. @eq-ab against history: eV-scale splittings would require $alpha approx 0.4$ (excluded by 7-8 orders); meV-scale requires $alpha approx 10^(-3)$ (equally excluded). The allowed orbital window sits at neV and below: the current orbital bound $alpha ~ 10^(-15)$ corresponds to $Delta E ~ 3 "feV"$, inside the projected clock reach. The orbital configuration is thirteen orders deeper than the laboratory one (signal coefficients $2.8 "eV"$ vs $9.5 times 10^(-14) "eV"$ per $alpha$), but requires a flight opportunity.
 
 = Experimental design: two phases plus an advanced stage
 
-== Phase 1: classical baseline
+== Phase 1: baseline calibration (mandatory, laboratory)
 
-- *Instrument*: solid-state Th-229 nuclear clock (148.18 nm direct excitation achieved; CaF₂ host with $447 plus.minus 25 "s"$ half-life; X-ray quenching readout accelerating cycles by ≥50x).
-- *Operation*: place the clock in a known gravitational-potential difference (ground: 1 m height, $g Delta h/c^2 approx 1.09 times 10^(-16)$; orbit: the full modulation of Eq. @eq-baseline), and measure the isomer frequency shift, reproducing the general-relativistic prediction.
-- *Verdict*: the ground baseline requires fractional stability better than $10^(-16)$ (the spinless-host route, Th(SO#sub[4])#sub[2], projects $4.6 times 10^(-23)/sqrt(tau)$); the orbital baseline is four orders less demanding and can serve early systematics commissioning.
+1. Move the tungsten block far away ($r > 2 "m"$) and record the reference frequency $f_0$.
+2. Move the block through a set of fixed distances $r_i$, measure $Delta f(r_i)$, and compare with the general-relativistic prediction $Delta f_"GR" = f_0 Delta Phi(r_i)/c^2$.
+3. Fit and remove thermal drift, light shift, Stark shift, and magnetic-field drift; build the complete error budget.
 
-== Phase 2: the Kaluza-Klein deviation search
+*Quantitative content of Phase 1*: the classical redshift of the laboratory source is $Delta Phi/c^2 approx 4.4 times 10^(-25)$ (full $0.15 ~ 1.5 "m"$ scan). At the projected stability this gives SNR $approx 1$ at $tau = 10^4 "s"$ and $approx 10$ at $tau = 10^6 "s"$—*the first nuclear-clock measurement of a laboratory-mass gravitational redshift* (Panda et al. measured the force version with atom interferometry; this is the frequency version), independently publishable. If the host crystal does not reach the projected stability, Phase 1 cannot run and the design as a whole is deferred.
 
-- *Operation*: on orbit, fit the total modulation amplitude $A_"tot" = A_"GR" + A_"KK"$ at the orbital frequency, with $A_"GR"$ modeled exactly by Eq. @eq-baseline; the residual is $A_"KK" = 2.8 alpha "eV"$.
-- *Null verdict*: $|A_"KK"| < 3 sigma_"clock"$ gives the constraint curve $alpha < alpha_"min"(lambda)$ (Table 3, Section 5).
-- *Signal verdict*: a nonzero residual that is (i) neV-scale, (ii) phase-consistent with the Yukawa correction, and (iii) independent of the classical model (cross-checked across different altitudes or eccentricities).
+== Phase 2: Yukawa-deviation search
+
+1. Scan $r in [0.15, 1.5] "m"$ (emphasis on the near range $0.15 ~ 0.3 "m"$ for the Yukawa shape), measuring $Delta f_"obs"(r_i)$.
+2. Residuals: $delta f(r_i) = Delta f_"obs"(r_i) - Delta f_"GR"(r_i)$.
+3. Fit the residuals to $delta f(r) = 23 alpha e^(-r/lambda) "Hz"$ (including the $lambda$-dependent shape factor) and extract $alpha, lambda$.
+
+== Orbital phases (retained from v1.0)
+
+- *Orbital Phase 1*: place the clock in a known potential difference (ground: 1 m height, $g Delta h/c^2 approx 1.09 times 10^(-16)$; orbit: the full modulation of Eq. @eq-baseline) and reproduce the general-relativistic prediction. The orbital baseline is four orders less demanding than the ground/laboratory baseline and can serve early systematics commissioning.
+- *Orbital Phase 2*: on orbit, fit $A_"tot" = A_"GR" + A_"KK"$ at the orbital frequency; the residual is $A_"KK" = 2.8 alpha "eV"$.
 
 == Advanced stage: active-control demonstration
 
-- *Operation*: apply microwave/magnetic fields to control the nuclear spin polarization and observe whether the coupling varies with the control parameters.
-- *Theoretical positioning (mandatory)*: in standard Kaluza-Klein the coupling $alpha$ is a constant and does *not* depend on the nuclear spin state; a measured state dependence would falsify not only general relativity but standard Kaluza-Klein, pointing to a new, state-dependent gravitational coupling channel. The correct statement of this stage is therefore "search for state-dependent gravitational coupling", not "tuning $alpha$". This discipline is what separates the design from folk proposals.
+- *Operation*: apply microwave/magnetic fields to control the nuclear spin/isomer internal state and observe whether the fitted coupling varies with the control parameters.
+- *Theoretical positioning (mandatory)*: in standard Kaluza-Klein the coupling $alpha$ is a constant, independent of the nuclear internal state; a measured state dependence would falsify not only general relativity but standard Kaluza-Klein, pointing to a new, state-dependent gravitational coupling channel. The correct statement of this stage is "search for state-dependent gravitational coupling", not "tuning $alpha$". This discipline is what separates the design from folk proposals.
 
 = Core parameter tables
 
@@ -107,52 +131,63 @@ at the orbital frequency $f_"orb" approx 1.80 times 10^(-4) "Hz"$. Numerically t
     [Wavelength / half-life], [148.18 $plus.minus$ 0.42 nm; $447 plus.minus 25$ s (CaF₂)], [Nat. Commun. 2024],
     [Solid-state lifetime], [641 s (CaF₂)], [2025 review],
     [Current linewidth], [kHz-scale (crystal broadening)], [present],
-    [Target stability], [$4.6 times 10^(-23)/sqrt(tau)$ (Th(SO#sub[4])#sub[2])], [theory, 2025],
+    [Projected stability], [$4.6 times 10^(-23)/sqrt(tau)$ (Th(SO#sub[4])#sub[2])], [theory, 2025],
     [Readout], [X-ray quenching, cycle speedup ≥50x], [Nat. Commun. 2024],
   ),
   caption: [Table 1: Th-229 nuclear clock instrument parameters.]
 )
 
-== Platform parameters (Table 2)
+== Dual-configuration parameters (Table 2)
 
 #figure(
   table(
-    columns: (1.2fr, 2.2fr, 1.4fr),
+    columns: (1.4fr, 1.8fr, 1.8fr),
     align: (left, left, left),
-    [*Parameter*], [*Value*], [*Note*],
-    [Orbit], [400 km altitude, $e = 0.01$], [LEO, $a = 6771$ km],
-    [Orbital frequency], [$1.80 times 10^(-4)$ Hz], [the modulation frequency],
-    [Classical $Delta Phi$], [$1.18 times 10^6$ m²/s²], [peak-to-peak, $2 g a e$],
-    [Classical $Delta nu/nu$], [$1.31 times 10^(-11)$], [Eq. (4)],
-    [Nucleus mass], [$3.8 times 10^(-25)$ kg], [$m_"Th"$],
-    [Signal coefficient], [$Delta E = 2.8 alpha$ eV], [Eq. (3)],
+    [*Parameter*], [*Laboratory*], [*Orbital*],
+    [Source], [100 kg tungsten, $r in [0.15, 1.5]$ m], [Earth, LEO 400 km, $e = 0.01$],
+    [$Delta Phi$], [$4.0 times 10^(-8)$ m²/s²], [$1.18 times 10^6$ m²/s²],
+    [Signal coefficient], [$9.5 times 10^(-14) alpha$ eV ($23 alpha$ Hz)], [$2.8 alpha$ eV],
+    [Classical baseline], [$4.4 times 10^(-25)$], [$1.31 times 10^(-11)$],
+    [$alpha_"min"$ (projected, $tau = 10^6$ s, $lambda ~ 10^7$ m)], [$approx 7 times 10^(-12)$], [$approx 2.7 times 10^(-25)$],
+    [Constraint improvement over existing], [5-6 orders (Eöt-Wash)], [~14 orders (LLR/MICROSCOPE)],
   ),
-  caption: [Table 2: Orbital platform and signal coefficient.]
+  caption: [Table 2: Dual configuration comparison. All $alpha_"min"$ values use the projected stability $4.6 times 10^(-23)/sqrt(tau)$. The orbital coefficient is $2.9 times 10^13$ times larger than the laboratory one.]
 )
 
-== Reachability (Table 3)
+== Reachability versus existing bounds (Table 3)
 
 #figure(
   table(
-    columns: (1.1fr, 1.6fr, 1.6fr, 1.6fr),
+    columns: (1.2fr, 1.6fr, 1.6fr, 1.6fr),
     align: (left, left, left, left),
-    [*Range $lambda$*], [*Suppression $e^(-a/lambda)$*], [*$alpha_"min"$ ($10^(-18)$ target)*], [*Existing bound*],
-    [$10^6$ m], [$1.1 times 10^(-3)$], [$2.7 times 10^(-15)$], [$~10^(-15)$ (MICROSCOPE)],
-    [$3 times 10^6$ m], [$0.10$], [$2.9 times 10^(-17)$], [$~10^(-15)$],
-    [$10^7$ m], [$0.51$], [$5.9 times 10^(-18)$], [$~10^(-15)$],
-    [$10^9$ m], [$0.99$], [$3.0 times 10^(-18)$], [$~10^(-11)$ (LLR)],
+    [*Range $lambda$*], [*Lab $alpha_"min"$ ($tau = 10^6$ s)*], [*Orbital $alpha_"min"$ ($tau = 10^6$ s)*], [*Existing bound (universal channel)*],
+    [$10^6$ m], [$3.5 times 10^(-9)$], [$1.2 times 10^(-22)$], [$~10^(-9)$ (ranging)],
+    [$10^7$ m], [$8.0 times 10^(-12)$], [$2.7 times 10^(-25)$], [$~10^(-9)$],
+    [$10^8$ m], [$4.3 times 10^(-12)$], [$1.5 times 10^(-25)$], [$~3 times 10^(-11)$ (LLR)],
+    [$10^9$ m], [$4.1 times 10^(-12)$], [$1.4 times 10^(-25)$], [$~10^(-11)$],
   ),
-  caption: [Table 3: Reachability versus existing bounds. $alpha_"min" = (delta E)/(m_"Th" Delta Phi) times e^(a/lambda)$, with $delta E = 8.36 "eV" times 10^(-18)$. The experiment deepens existing bounds by 2-8 orders of magnitude in the $lambda > 10^6 "m"$ window.]
+  caption: [Table 3: Reachability with the projected stability ($delta E = 8.36 "eV" times 4.6 times 10^(-26)$ at $tau = 10^6$ s, 1σ convention; the 5σ convention multiplies by $5 sqrt(2) approx 7.07$). The laboratory configuration deepens existing bounds by 1-2 orders in the $lambda in [10^7, 10^10] "m"$ window; the orbital configuration by ~14 orders.]
 )
 
 = Systematic-error budget
+
+*Laboratory noise budget*:
+
+1. *Intrinsic instability*: $4.6 times 10^(-23)/sqrt(tau)$; $approx 4.6 times 10^(-25)$ at $tau = 10^4$ s, $approx 4.6 times 10^(-26)$ at $tau = 10^6$ s.
+2. *Static magnetic field*: residual $< 1 "nT"$; spinless host removes first-order Zeeman.
+3. *Crystal thermal gradient*: temperature stability better than $1 "mK"$.
+4. *Source vibration*: vibration-isolated platform; translation-stage positioning better than $0.1 "mm"$ (corresponding to $delta Phi/Phi ~ 10^(-3)$, modeled as a systematic in the fit).
+5. *Static electric field*: grounded shield shell, eliminating Stark shifts.
+6. *X-ray quenching cycle*: duty-cycle effects require cycle phase locking.
+
+*Orbital budget (retained from v1.0)*:
 
 #figure(
   table(
     columns: (1.5fr, 1.3fr, 2.6fr, 1.6fr),
     align: (left, left, left, left),
     [*Source*], [*Scale (present)*], [*Control*], [*Target*],
-    [Orbit determination], [cm-level → $delta Phi/c^2 ~ 10^(-15)$], [SLR/GNSS precise orbit determination + reprocessing], [mm-level → $10^(-16)$],
+    [Orbit determination], [cm-level $arrow.r$ $delta Phi/c^2 ~ 10^(-15)$], [SLR/GNSS precise orbit determination + reprocessing], [mm-level $arrow.r$ $10^(-16)$],
     [Gravity-field model], [J2+ multipoles $~10^(-10)$], [high-order multipoles + time-variable models], [$10^(-18)$ residuals],
     [Tides / atmosphere], [time-variable, $~10^(-12)$], [common-mode subtraction + dual clocks], [≤ $10^(-17)$],
     [Crystal-field quadrupole], [kHz-scale (current dominant)], [spinless host + quadrupole suppression], [mHz-scale],
@@ -161,16 +196,16 @@ at the orbital frequency $f_"orb" approx 1.80 times 10^(-4) "Hz"$. Numerically t
     [X-ray quenching cycle], [duty-cycle effects], [cycle phase locking], [≤ $10^(-18)$],
     [Space-ground link], [$~10^(-16)$], [frequency-comb / two-way microwave link], [$10^(-18)$],
   ),
-  caption: [Table 4: Systematic-error budget. Entries marked "parametric" require calibration by the host group; the table gives control methods and target magnitudes, not promises.]
+  caption: [Table 4: Orbital systematic-error budget. Entries marked "parametric" require calibration by the host group.]
 )
 
-Reading: the main systematic battlefield is not sensitivity but *the exact modeling of the classical baseline*: the Phase-2 signal shares the orbital frequency with the classical modulation and must be separated by modeling precision, not by spectral discrimination. This is structurally identical to the gravitational Aharonov-Bohm interpretation, and it is the reason Phase 1 exists.
+Reading: in both configurations the main systematic battlefield is not sensitivity but *the exact modeling of the classical baseline*. In the laboratory configuration the Yukawa shape is spectrally separated (near-range $0.15 ~ 0.3 "m"$ scan); in the orbital configuration the Phase-2 signal shares the orbital frequency with the classical modulation and must be separated by modeling precision—which is why Phase 1 exists.
 
 = Verdict formulas
 
-- *Null verdict*: $|A_"KK"| < 3 sigma$ implies $alpha < alpha_"min"(lambda)$, with $alpha_"min"$ from Table 3; publication form is the constraint curve $alpha(lambda)$.
-- *Signal verdict*: a nonzero residual satisfying (i) neV magnitude, (ii) Yukawa phase behavior, (iii) cross-validation across orbit configurations.
-- *State-dependence verdict (advanced)*: coupling varying with nuclear spin polarization falsifies GR and standard KK and points to a new channel; invariance excludes state-dependent coupling down to the experimental sensitivity.
+- *Null verdict (most likely)*: residuals consistent with zero. Product: a new exclusion boundary on the $alpha(lambda)$ plane ($alpha < 7 times 10^(-12)$ at $tau = 10^6$ s, $lambda ~ 10^7$ m), pushing the Eöt-Wash boundary down by 5-6 orders of magnitude. A null result is a high-quality result in itself.
+- *Signal verdict*: residuals significantly nonzero with exponential decay $prop e^(-r/lambda)$. Three conditions must hold simultaneously: condition A (all known systematics excluded); condition B (fit parameters inside the unexcluded window $alpha in [10^(-12), 10^(-6)]$); condition C (signal scales linearly with the source mass $M$). All three together constitute a candidate evidence.
+- *State-dependence verdict (advanced, core innovation)*: with source, distance, and mass held fixed, microwave pulses change the nuclear internal state; test whether the fitted $alpha$ changes reproducibly. A reproducible change proves the gravitational coupling can be modulated by internal quantum degrees of freedom—the precursor evidence that the engineering window opens. *Note*: even an observed tunable $alpha$ does not constitute an anti-gravity prototype; it only proves the existence of a controllable channel. Standard KK has constant $alpha$; state dependence, if measured, falsifies GR and standard KK simultaneously, pointing to a new state-dependent coupling channel.
 
 = Milestones
 
@@ -180,8 +215,8 @@ Reading: the main systematic battlefield is not sensitivity but *the exact model
     align: (left, left, left, left),
     [*Milestone*], [*Content*], [*Prerequisite*], [*Output*],
     [M1], [Parameter space, reachability, error budget (this document)], [none], [theory paper (submittable now)],
-    [M2], [Ground nuclear-clock redshift test (1 m, $1.09 times 10^(-16)$)], [spinless host at $10^(-16)$], [GR test + systematics commissioning],
-    [M3], [Orbital baseline + KK search], [M2 + flight opportunity], [$alpha < 10^(-17)$ or a signal],
+    [M2], [Laboratory-mass nuclear-clock redshift (Phase 1, $4.4 times 10^(-25)$)], [spinless host at projected stability], [GR test + error budget],
+    [M3], [Yukawa residual search (Phase 2) + orbital baseline/KK search], [M2 + (for orbital) flight opportunity], [$alpha < 7 times 10^(-12)$ or a signal],
     [M4], [Active-control demonstration], [M3 positive signal], [state-dependence verdict],
   ),
   caption: [Table 5: Milestones. M1 is achievable now; M2-M4 depend on host-material and flight-opportunity progress.]
@@ -189,18 +224,36 @@ Reading: the main systematic battlefield is not sensitivity but *the exact model
 
 = Collaboration interface
 
-- *Theory collaborator provides*: signal predictions (Eqs. 1-4), the reachability table (Table 3), the error budget (Table 4), the verdict formulas (Section 7), parameter-scan code, and the three-model discrimination simulations (all in the companion repository).
-- *Host group provides*: the clock platform, in-situ calibration of environmental shifts, and an orbital or ground-based potential-difference platform.
-- *Candidate groups*: Huazhong University of Science and Technology gravity center, University of Science and Technology of China precision-measurement institutes, SIOM, and the European Th-229 clock groups.
-- *Cost model*: the theory collaborator carries zero hardware cost; the ground baseline can run on existing clock platforms.
+- *Theory collaborator provides*: signal predictions (Eqs. 1-6), the dual-configuration reachability tables (Tables 2-3), the error budgets, the verdict formulas, and the executable package (reachability scan, signal simulator, MICROSCOPE comparison; scripts 14/15/16 in the companion repository; user manual in `docs/`).
+- *Host group provides*: the clock platform, in-situ calibration of environmental shifts, and a laboratory or orbital potential-difference platform.
+- *Candidate groups*: Huazhong University of Science and Technology gravity center, University of Science and Technology of China precision-measurement institutes, SIOM, and the European Th-229 clock groups (contact plan in `docs/实验组对接清单.md`).
+- *Cost model*: the theory collaborator carries zero hardware cost; the laboratory baseline can run on existing clock platforms.
+- *Script convention note*: repository scripts give 1σ values ($alpha_"min" approx 4.0 times 10^(-12)$ laboratory, $1.4 times 10^(-25)$ orbital, both at $tau = 10^6$ s, $lambda arrow.r infinity$); the 5σ convention multiplies by $5 sqrt(2) approx 7.07$. Table 3 quotes the $lambda$-dependent 1σ values.
 
 = Compatibility with existing constraints
 
-Every parameter of this design lies in the unexcluded window: the target region ($lambda > 10^6 "m"$, $alpha > 10^(-18)$) sits in the open region below the MICROSCOPE ($alpha ~ 10^(-15)$) and LLR bounds; the experiment introduces no new interaction hypothesis (standard KK is an existing framework); it conflicts with neither Eöt-Wash nor short-range fifth-force bounds. The design introduces exactly one conjecture, and it is explicitly labeled (Section 3.3: state-dependent coupling is a *hypothesis to be tested*, not a premise of the design).
+Every parameter of this design lies in the unexcluded window. The laboratory target ($alpha in [10^(-12), 10^(-6)]$, $lambda ~ 10^(-2) ~ 10 "m"$) sits below the Eöt-Wash exclusion ($alpha > 10^(-6)$); the orbital target ($lambda > 10^6 "m"$) sits in the open region below the MICROSCOPE composition-channel and LLR universal-channel bounds. The KK graviton couples universally to $T_("μν")$ and therefore preserves the equivalence principle: EP experiments are structurally blind to it, which is precisely why the clock measurement (a universal-channel test) provides independent new sensitivity (see script 15 for the channel decomposition). The design introduces no new interaction hypothesis (standard KK is an existing framework) and exactly one conjecture, explicitly labeled: the state-dependent coupling of Section 5.4 is a *hypothesis to be tested*, not a premise of the design.
+
+= Limitations (mandatory for review defense)
+
+1. This experiment tests only *a specific class of KK models (lightest-mode Yukawa correction)*; it cannot exclude all higher-dimensional theories.
+2. Even an observed tunable $alpha$ remains far from macroscopic gravitational manipulation; this experiment performs only a principle-level feasibility test.
+3. This experiment does not cover emergent-gravity or quantum-superposition-source models; those require GIE entanglement experiments (see appendix).
+4. All sensitivity numbers depend on the *projected* stability of the spinless host. If actual performance falls short, $alpha_"min"$ degrades proportionally to $4.6 times 10^(-23)/sqrt(tau)$; the paper must present "projected vs measured" side-by-side.
 
 = Conclusion
 
-This design answers the highest-value question at the lowest cost: *does spacetime possess controllable additional degrees of freedom*? The two-phase structure guarantees an independent output at every step: the baseline alone is the first nuclear-clock gravitational redshift test; the null result of the deviation search is a two-order constraint improvement; a positive signal opens the first door to gravitational engineering. The academic safety of the design rests on three pillars: goal-statement discipline (test properties, claim no engineering), null-result value (a constraint is a result), and parameter compliance (everything inside the unexcluded window).
+This design answers the highest-value question at the lowest cost: *does spacetime possess controllable additional degrees of freedom?* The dual configuration guarantees an independent output at every step: Phase 1 alone is the first laboratory-mass nuclear-clock gravitational-redshift test; the null result of the deviation search is a 5-6-order constraint improvement on the $alpha(lambda)$ plane; the orbital configuration, given a flight opportunity, reaches $10^(-25)$; a positive signal opens the first door to gravitational engineering. The academic safety of the design rests on three pillars: goal-statement discipline (test properties, claim no engineering), null-result value (a constraint is a result), and parameter compliance (everything inside the unexcluded window).
+
+= Appendix: GIE backup experiment (Route B fallback)
+
+If nuclear-clock collaboration proves too costly, the GIE design is prepared in parallel:
+
+- *Target*: gravity-mediated entanglement (adjudication-matrix rows 6-7).
+- *Observables*: negativity $N$, CHSH violation; the three-model discrimination simulation is complete (quantum model $N approx 0.078$; mean-field/LOCC strictly zero).
+- *Unique upgrade*: add internal-state control to test whether the entanglement coupling is modulated by the quantum state.
+- *Difficulty*: nanogram-scale spatial superpositions; the hardest noise environment; no final measurement worldwide yet.
+- *Ready assets*: continuous-variable verification (qubit-abstraction fidelity $~e^(-2 alpha^2)$) and the N(3σ) cost estimate are both in the repository, usable directly as collaboration-proposal attachments.
 
 #pagebreak()
 
@@ -217,3 +270,4 @@ This design answers the highest-value question at the lowest cost: *does spaceti
 8. Jusufi, K. et al. *J. Cosmol. Astropart. Phys.* (2025).
 9. Panda, C. D. et al. *Nature* 631, 515 (2024).
 10. Touboul, P. et al. *Phys. Rev. Lett.* 129, 121102 (2022) (MICROSCOPE).
+11. Kapner, D. J. et al. *Phys. Rev. Lett.* 98, 021101 (2007) (Eöt-Wash).
