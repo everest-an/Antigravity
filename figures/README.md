@@ -11,9 +11,12 @@ py 02_reality_stack.py
 py 03_rt_mincut.py
 py 04_fifth_force.py
 py 05_gie_discrimination.py
+py 06_reachability.py
+py generate_en.py   # 英文标注版全套（en_fig01..06）
 ```
 
 依赖：matplotlib；fig03 调用 simulations/05、07，fig05 需 QuTiP。
+所有脚本使用 pathlib 相对路径（`Path(__file__)`），与运行目录无关（CI 安全）。
 
 ## 图清单
 
@@ -24,6 +27,7 @@ py 05_gie_discrimination.py
 | fig03 RT 极小面 | S₂ vs mincut·lnχ，两种独立实现互验 | simulations/05、07 |
 | fig04 第五力全景 | α–λ 约束阶梯 + KK 需求点 + 开放窗口 | experiments/08、05 |
 | fig05 GIE 歧视 | (a) 三模型负度 vs φ；(b) CV 收敛 ∝ e^(−2α²) | simulations/01、06 |
+| fig06 核钟可达性 | 实验室 α_min(λ, τ) 曲线族 + 轨道极限 + 测距/MICROSCOPE 既有界 + 未排除窗口 | experiments/14（公式同源） |
 
 ## 字体与渲染备注
 

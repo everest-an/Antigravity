@@ -41,9 +41,9 @@
   Tesla 问题的最终回答。
 - [`判决矩阵剩余六行-证据闭合.md`](./判决矩阵剩余六行-证据闭合.md) —— 附录：第 4、9、10、13、14、16
   行的证据闭合说明（为何不可直接模拟、证据链、什么进展会改变判决）。至此 18 行全部有最终状态。
-- [`experiments/`](./experiments/) —— 判决矩阵的数量级核算脚本（9 份，可复现，
+- [`experiments/`](./experiments/) —— 判决矩阵的数量级核算脚本（16 份，可复现，
   `py <script>.py` 运行），把每一行箭头换算成具体数字。
-- [`simulations/`](./simulations/) —— 理论模拟（5 份）：GIE 三模型歧视（量子引力 vs
+- [`simulations/`](./simulations/) —— 理论模拟（7 份）：GIE 三模型歧视（量子引力 vs
   Schrödinger–Newton vs LOCC）、电磁场→时空曲率（FFT 泊松解）、纠缠→几何玩具骨架、
   frame-dragging 场（Gravity Probe B 校验）、树张量网络 RT 极小面。
 - [`run_all.py`](./run_all.py) —— 统一运行入口：一次跑完全部核算与模拟并打印摘要。
@@ -62,8 +62,8 @@
   摘要 + 三贡献 + 定理 + 19 行矩阵 + 可复现数据锚点（Perspective/框架论文底稿）。
 - [`投稿策略.md`](./投稿策略.md) —— 严谨化附件 F：四层目标（Perspective/框架论文/
   概念论文/中文版）、时间线、阻塞项清单。
-- [`figures/`](./figures/) —— 投稿用图（5 幅，PNG+SVG，脚本可复现）：判决矩阵、
-  Reality Stack、RT 极小面互验、第五力全景、GIE 歧视。
+- [`figures/`](./figures/) —— 投稿用图（6 幅，PNG+SVG，脚本可复现）：判决矩阵、
+  Reality Stack、RT 极小面互验、第五力全景、GIE 歧视、核钟可达性。
 - [`优先权检索记录.md`](./优先权检索记录.md) —— 严谨化附件 G：三个核心贡献的优先权
   档案；关键发现——warp-drive no-go 文献（Bobrick–Martire、Barzegar 系）是本定理的
   特殊情形（需声明差异），量子不等式实验地位存疑（Maclay–Davis 2019）。
