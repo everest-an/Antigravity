@@ -5,9 +5,9 @@ test_all.py —— 全量回归测试（计算 / 图 / 论文 / 幻灯片）
 用法：py test_all.py
 
 覆盖：
-  1. experiments/  16 份数量级核算（含 E2 包：14 可达性、15 MICROSCOPE、16 信号模拟器）
+  1. experiments/  17 份数量级核算（含 E2 包：14 可达性、15 MICROSCOPE、16 信号模拟器、17 态相关 EFT 界）
   2. simulations/  7 份模拟（含 QuTiP、quimb）
-  3. figures/      5 幅中文图 + 5 幅英文图
+  3. figures/      6 幅中文图 + 6 幅英文图
   4. paper/        7 份论文中英双版（14 个 Typst → PDF）
   5. ppt/          汇报幻灯片（15 页）
 
@@ -37,7 +37,8 @@ SUITES = [
     ("figures-cn（中文图）", [
         ROOT / "figures" / f"0{i}_{n}.py" for i, n in [
             (1, "decision_matrix"), (2, "reality_stack"), (3, "rt_mincut"),
-            (4, "fifth_force"), (5, "gie_discrimination"), (6, "reachability")]]),
+            (4, "fifth_force"), (5, "gie_discrimination"), (6, "reachability"),
+            (7, "state_dependence")]]),
     ("figures-en（英文图）", [ROOT / "figures" / "generate_en.py"]),
     ("papers（论文 PDF）", [ROOT / "build" / "build_pdf.py"]),
     ("slides（幻灯片）", [ROOT / "ppt" / "build_ppt.py"]),

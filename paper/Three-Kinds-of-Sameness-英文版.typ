@@ -26,7 +26,7 @@
 ]
 
 #par(justify: false, first-line-indent: 0em)[
-*Abstract*　The term "unified field theory" is used for three logically distinct assertions: the conversion type (one field physically transforms into another), the geometric type (multiple fields are projections of higher-dimensional geometry), and the algebraic type (multiple theories share a deeper algebraic structure). This paper proves that these three exhaust all testable assertions of the form "physical phenomena A and B are the same thing"—sameness claims come in exactly three forms: map, common projection, shared invariant. The proof uses the formal framework of theories (theories as categories, Halvorson 2019) and the formal duality-equivalence literature (De Haro-Butterfield 2018; Weatherall 2018) as its language. Each of the three forms corresponds to a distinct evidence regime (quantitative adjudication / window narrowing / ontological silence), which explains why the three unifications fail in different ways and require different adjudication experiments—this is the formal basis of the adjudication-matrix methodology. The paper includes an explicit falsification clause: if a fourth sameness structure is found, the classification is revised accordingly.
+*Abstract*　The term "unified field theory" is used for three logically distinct assertions: the conversion type (one field physically transforms into another), the geometric type (multiple fields are projections of higher-dimensional geometry), and the algebraic type (multiple theories share a deeper algebraic structure). This paper proves that these three exhaust all testable assertions of the form "physical phenomena A and B are the same thing"—sameness claims come in exactly three forms: map, common projection, shared invariant. The proof uses the formal framework of theories (theories as categories, Halvorson 2019) and the formal duality-equivalence literature (De Haro-Butterfield 2018; Weatherall 2018) as its language, and takes the 2025 monograph by De Haro and Butterfield, *The Philosophy and Physics of Duality*, as its principal interlocutor: the monograph formalizes map-type sameness (theoretical equivalence) in its authoritative form, and this paper extends it to the complete trichotomy that also covers the projection and invariant types. Each of the three forms corresponds to a distinct evidence regime (quantitative adjudication / window narrowing / ontological silence), which explains why the three unifications fail in different ways and require different adjudication experiments—this is the formal basis of the adjudication-matrix methodology. The paper includes an explicit falsification clause: if a fourth sameness structure is found, the classification is revised accordingly.
 
 *Keywords*　unified field theory; theoretical equivalence; category theory; duality; scientific realism
 ]
@@ -89,6 +89,20 @@ Each structure determines an evidence regime, explaining the different fates of 
 
 This correspondence is the formal basis of the adjudication-matrix methodology: each matrix row is first classified as some sameness claim, and the adjudication channel is then configured according to that class's evidence regime—not a methodological choice, but a structural necessity.
 
+= Relation to De Haro-Butterfield (2025)
+
+The 2025 monograph by De Haro and Butterfield, *The Philosophy and Physics of Duality* (Oxford University Press, open access), advances the philosophical formalization of dualities to its authoritative form: theories as structured categories, dualities as equivalence maps, together with a criterion of theoretical equivalence and a duality-based argument for realism. The present theorem stands in a threefold relation to the monograph:
+
+#set par(first-line-indent: 0em)
+(1) *Containment*. The "sameness" the monograph treats is the first class of our classification (the map type)—they give its most precise modern formalization. We do not duplicate it; we cite it. The formal content of the map type is taken to be the monograph's framework.
+
+(2) *Generalization*. This paper proves that sameness claims come in exactly three classes, of which the map type is only one. The projection type (Kaluza-Klein fibration, AdS/CFT holography) and the invariant type (the kinematic algebra of the double copy) appear in the monograph as examples; here they are elevated to classification members on a par with the map type—"common projection" and "shared invariant" are sameness structures logically independent of equivalence maps.
+
+(3) *Testability link*. Our structure-evidence correspondence (Table 1) adds a dimension the monograph does not systematize: the structural type of a sameness claim determines how it can be tested—map type by computation, projection type by window narrowing, invariant type by ontological silence. This is the bridge from "formal criteria of theoretical equivalence" to "testing strategies for unification claims," and the point where the adjudication-matrix methodology gains a footing in the philosophy-of-physics literature.
+#set par(first-line-indent: 1.6em)
+
+*Methodological statement*: we do not challenge the monograph's equivalence criterion; our claim is that whenever physicists say "A and B are the same thing," the structural basis of the assertion is one of only three kinds, each with a distinct evidential fate—stated within the monograph's framework as a categorical fact (the completeness theorem), with its correction conditions made public through the falsification clause. In venue terms, this paper is addressed to readers of philosophy of physics (SHPSM / Philosophy of Science): the trichotomy is a philosophical proposition, and the physics content (the adjudication matrix, the scripts) is its testing support.
+
 = Falsification Clause
 
 The theorem includes an explicit falsification clause: *if there exists a testable sameness claim whose structural basis cannot be decomposed into the map/projection/invariant three, the theorem is falsified and the classification revised*. The historical candidate for a "fourth"—duality from common boundary conditions (bulk-boundary correspondence)—falls within the projection type in this framework (AdS/CFT is a holographic projection); should future physics provide a genuine fourth, the classification extends accordingly. The value of a completeness proof lies precisely in making such revision precisely describable.
@@ -107,9 +121,11 @@ The three unifications are not one viewpoint among many but the three possible s
 2. Butterfield, J. & De Haro, S. et al. On Dualities and Equivalences Between Physical Theories. arXiv:1806.01505 (2018).
 3. Weatherall, J. O. Theoretical Equivalence in Physics. arXiv:1810.08192 (2018).
 4. De Haro, S. Conceptual Aspects of Gauge/Gravity Duality. arXiv:1509.09231 (2015).
-5. Bern, Z., Carrasco, J. J. & Johansson, H. (double-copy program, review series).
-6. Kaluza, T. (1921); Klein, O. (1926) (fibration prototypes).
-7. MuningAn. Three Unifications: A Falsifiable Map of Quantum-Gravity Frontiers (2026).
+5. De Haro, S. & Butterfield, J. *The Philosophy and Physics of Duality* (Oxford University Press, 2025), 624 pp, open access. arXiv:2508.01616.
+6. Book review: Metascience 35, 9 (2026), DOI 10.1007/s11016-026-01101-7.
+7. Bern, Z., Carrasco, J. J. & Johansson, H. (double-copy program, review series).
+8. Kaluza, T. (1921); Klein, O. (1926) (fibration prototypes).
+9. MuningAn. Three Unifications: A Falsifiable Map of Quantum-Gravity Frontiers (2026).
 
 #v(0.4em)
 *Statement*　The categorical language of this paper serves only as a classification skeleton; all physical content comes from the companion papers and the literature.

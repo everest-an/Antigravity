@@ -279,4 +279,42 @@ ax.grid(alpha=0.25, which="both")
 fig.savefig(str(FIG / "en_fig06_reachability.png"))
 plt.close(fig)
 
-print("english figures generated:", ", ".join(f"en_fig0{i+1}" for i in range(6)))
+# ---------------- fig07: EFT state-dependence bound ----------------
+MPLAN = 1.221e19
+QNUC = 2.41e4
+MNUC = 213.3
+LAM1M = 5.068e15
+R5 = 2.9e-11
+R1 = 4.0e-12
+
+def delta_alpha7(alpha, Lambda):
+    return np.sqrt(alpha) * QNUC * MPLAN / (Lambda ** 2 * LAM1M ** 2 * MNUC)
+
+lam_scan7 = np.logspace(-3, 19, 300)
+alphas7 = [(1e-6, "#0b5394"), (1e-9, "#3d85c6"), (1e-12, "#9fb8d4")]
+fig, ax = plt.subplots(figsize=(9.5, 6.5))
+for a, c in alphas7:
+    ax.plot(lam_scan7, delta_alpha7(a, lam_scan7), color=c, lw=1.8,
+            label=f"EFT bound da(Lambda), a = {a:.0e}")
+ax.axhline(R5, color="#c0392b", lw=2.0, ls="-", label=f"clock reach 5-sigma = {R5:.0e}")
+ax.axhline(R1, color="#c0392b", lw=1.4, ls="--", label=f"clock reach 1-sigma = {R1:.0e}")
+ax.axvspan(1e-3, 2e-1, color="#8e44ad", alpha=0.12)
+ax.text(6e-3, 1.5e-8, "EFT-invalid region\n(Lambda < QCD scale ~ 0.2 GeV)",
+        fontsize=9, color="#5b2c6f", ha="left", va="center")
+ax.annotate("crossing at Lambda ~ 43 MeV (a=1e-6)\nlies inside the EFT-invalid region:\nobservability = EFT failure",
+            xy=(4.3e-2, R5), xytext=(8e0, 1e-8),
+            fontsize=9, color="#c0392b",
+            arrowprops=dict(arrowstyle="->", color="#c0392b", lw=1))
+ax.axvline(1e4, color="#666666", lw=1.0, ls=":")
+ax.text(1.6e4, 2e-4, "Lambda = 10 TeV\n(LHC bound)", fontsize=8.5, color="#666666")
+ax.set_xscale("log"); ax.set_yscale("log")
+ax.set_xlim(1e-3, 1e19); ax.set_ylim(1e-56, 1e-8)
+ax.set_xlabel("Lambda [GeV]  (EFT cutoff)", fontsize=11)
+ax.set_ylabel("da  (state-dependent Yukawa coupling difference)", fontsize=11)
+ax.set_title("EFT upper bound on state-dependent coupling: the clock search is a zero-background falsification test (lambda = 1 m)", fontsize=12)
+ax.legend(fontsize=8.5, frameon=False, loc="lower left")
+ax.grid(alpha=0.25, which="both")
+fig.savefig(str(FIG / "en_fig07_state_dependence.png"))
+plt.close(fig)
+
+print("english figures generated:", ", ".join(f"en_fig0{i+1}" for i in range(7)))

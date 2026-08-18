@@ -26,7 +26,7 @@
 ]
 
 #par(justify: false, first-line-indent: 0em)[
-*Abstract*　We prove, within the effective field theory (EFT) of general relativity plus the Standard Model, a classification theorem for gravitational control channels: every low-energy, Lorentz-invariant metric-matter coupling that acts on test-particle motion falls into exactly one of three classes organized by symmetry and dimension—the source channel (minimal coupling through Tμν and higher-dimension operators, i.e., energy/pressure/current engineering), the geometric channel (curvature couplings, suppressed by 1/M_Pl or constrained by observation), and the new-sector channel (fields beyond the Standard Model, constrained by fifth-force and Lorentz-invariance tests). Corollary: gravitational engineering within GR+SM is equivalent to stress-energy engineering; any "antigravity" device must pass through one of the three channels, and each channel is quantitatively bounded. The proof rests on four pillars: the positive energy theorem (no net repulsive gravity from isolated systems under the dominant energy condition), EFT dimensional analysis (curvature terms unreachable), PPN and gravitational-wave observations (suppression of geometric-channel coefficients), and quantum inequalities (quantum bound on the source channel). The theorem's relation to the warp-drive no-go literature is one of containment; differences are stated explicitly.
+*Abstract*　We prove, within the effective field theory (EFT) of general relativity plus the Standard Model, a classification theorem for gravitational control channels: every low-energy, Lorentz-invariant metric-matter coupling that acts on test-particle motion falls into exactly one of three classes organized by symmetry and dimension—the source channel (minimal coupling through Tμν and higher-dimension operators, i.e., energy/pressure/current engineering), the geometric channel (curvature couplings, suppressed by 1/M_Pl or constrained by observation), and the new-sector channel (fields beyond the Standard Model, constrained by fifth-force and Lorentz-invariance tests). Corollary: gravitational engineering within GR+SM is equivalent to stress-energy engineering; any "antigravity" device must pass through one of the three channels, and each channel is quantitatively bounded. The proof rests on four pillars: the positive energy theorem (no net repulsive gravity from isolated systems under the dominant energy condition), EFT dimensional analysis (curvature terms unreachable), PPN and gravitational-wave observations (suppression of geometric-channel coefficients), and quantum inequalities (quantum bound on the source channel). The theorem's relation to the warp-drive no-go literature is one of containment; differences are stated explicitly. Corollary 4 gives the EFT upper bound on state-dependent coupling: the dependence of the Yukawa coupling on the nuclear internal state is suppressed by about 16 orders of magnitude ($delta alpha approx 5.4 times 10^(-22)$ for $alpha = 10^(-6)$, $Lambda = 10 "TeV"$, $lambda = 1 "m"$), more than 10 orders below the nuclear-clock reachability—the clock's state-dependence search is therefore a zero-background falsification test (script 17, Fig. 7).
 
 *Keywords*　effective field theory; no-go theorems; positive energy theorem; energy conditions; gravitational engineering
 ]
@@ -61,6 +61,11 @@ where $S_("min")$ is minimal coupling of matter to the metric (encoded by $T_("�
 *Corollary 1*: Gravitational engineering within GR+SM is equivalent to stress-energy engineering.
 *Corollary 2*: The efficacy of any mass-decomposition component as an engineering lever equals $partial T_("μν") / partial("that component")$.
 *Corollary 3*: Effective-mass (dispersion-relation) engineering does not change $T_("μν")$ and is gravitationally inert.
+*Corollary 4 (EFT upper bound on state-dependent coupling)*: If a new-sector mediator couples to the nuclear internal state (ground vs isomer), its minimal EFT realization (dimension-6, coefficient $c/Lambda^2$; derived in the next section) gives a state-dependent Yukawa coupling difference
+
+$ delta alpha = sqrt(alpha) (c Q_"nuc" M_"Pl")/(Lambda^2 lambda^2 m_"nuc") approx 5.4 times 10^(-22) (sqrt(alpha)/10^(-3)) (10 "TeV"/Lambda)^2 (1 "m"/lambda)^2, $
+
+with $Q_"nuc" approx 9.4 "b"$ the Th-229 intrinsic quadrupole moment. For any $alpha$ in the allowed window and any $Lambda ≥ 1 "GeV"$, $delta alpha$ lies 3-13 orders below the nuclear-clock reachability (5σ $~ 3 times 10^(-11)$). The clock's state-dependence search is therefore a zero-background falsification test: any observation of $delta alpha > 10^(-11)$ simultaneously falsifies GR, standard KK, and every weakly coupled local EFT.
 #set par(first-line-indent: 1.6em)
 
 = Proof (Four Pillars)
@@ -81,19 +86,31 @@ Couplings of new fields are subject to three classes of tests: (i) fifth force (
 
 The decomposition of Eq. @eq-eft is complete for local, Lorentz-invariant, unitary EFTs (the standard EFT proposition: all allowed interactions are generated by symmetry). The three pillars close the usable parameter regions of the three channels respectively; hence the three channels together exhaust all control channels within GR+SM. QED.
 
+= Derivation of Corollary 4 (the EFT bound on state-dependent coupling)
+
+A KK-type mediator couples to matter universally, with $sqrt(alpha) m/M_"Pl"$ per vertex (universality is the equivalence-principle content; two vertices restore the Yukawa strength $alpha$). The nuclear internal state is distinguished by the quadrupole moment $Q_("ij")$; the leading operator distinguishing ground and isomer states is dimension-6:
+
+$ O = c Q_("ij") partial_i partial_j phi / Lambda^2, quad c ~ O(1), $ <eq-sdop>
+
+with $phi$ the KK scalar mode and $Lambda$ the EFT cutoff. In the static limit $partial^2 phi arrow.r m_"KK"^2 phi = phi/lambda^2$. The ratio of the state-dependent potential to the universal Yukawa potential is
+
+$ (delta alpha)/(alpha) = (c Q_"nuc" M_"Pl")/(sqrt(alpha) Lambda^2 lambda^2 m_"nuc"). $ <eq-sdratio>
+
+Three remarks. (i) $delta alpha$ grows as $sqrt(alpha)$—the state-dependent channel is relatively stronger for smaller $alpha$, but its absolute size remains far below reachability throughout the window (see the tables of script 17). (ii) Observability requires the cutoff to drop to about 43 MeV (at the window edge $alpha = 10^(-6)$; about 1 MeV at the reachability edge $alpha = 10^(-12)$)—that is, below the hadronic/QCD scale, where the local EFT description itself breaks down. (iii) New physics with a MeV cutoff at macroscopic $lambda$ was long excluded by fifth-force tests. Together: *the state-dependent signal is observable if and only if the local EFT description fails*. The advanced stage of the nuclear-clock design (microwave control of the nuclear internal state) is therefore a zero-background falsification test with a quantified threshold, whose target covers GR, standard KK, and all weakly coupled local EFTs; all numbers come from experiments/17, and Fig. 7 visualizes the zero-background criterion.
+
 = Relation to the No-Go Literature (Statement of Differences)
 
 The warp-drive no-go results (Bobrick-Martire; Le; Barzegar-Buchert-Vigneron) are special cases of the (C1)-(C3) classification within specific metric classes: each result proves that a particular metric-engineering proposal cannot bypass the source channel. The new necessity proofs for exotic matter (Maier 2026; Cataldo 2026) directly strengthen the source-channel boundary. The generalizations of this theorem are: (i) coverage of arbitrary engineering operations rather than specific metric classes; (ii) statement in engineering language (control variables, lever efficacy); (iii) row-by-row correspondence of the three channel boundaries with the adjudication matrix.
 
 = Falsification Clause and Boundary
 
-*Falsification clause*: The theorem fails in four cases, and failure is discovery: (1) the dominant energy condition is experimentally violated (source channel reopens); (2) some curvature coupling is observed with coefficient far above the $1/M_"Pl"^2$ suppression (geometric channel reopens); (3) fifth-force/LIV tests find significant signals (new-sector channel opens); (4) quantum superposition sources or emergent-geometry mechanisms (not covered by the theorem; corresponding to adjudication-matrix rows 6-7, 18, 20). Each of the four cases has scheduled adjudication experiments—the theorem's falsifiability is thereby made explicit.
+*Falsification clause*: The theorem fails in five cases, and failure is discovery: (1) the dominant energy condition is experimentally violated (source channel reopens); (2) some curvature coupling is observed with coefficient far above the $1/M_"Pl"^2$ suppression (geometric channel reopens); (3) fifth-force/LIV tests find significant signals (new-sector channel opens); (4) the nuclear-clock state-dependence search measures $delta alpha > 10^(-11)$ (Corollary 4's zero-background criterion is violated—covering strongly coupled, non-local, and state-charged gravitational sectors); (5) quantum superposition sources or emergent-geometry mechanisms (not covered by the theorem; corresponding to adjudication-matrix rows 6-7, 18, 20). Each of the five cases has scheduled adjudication experiments—the theorem's falsifiability is thereby made explicit.
 
 *Boundary*: The theorem is a classification statement, not a discovery statement; it does not predict new phenomena, it states precisely why old intuitions fail and where the surviving alternative exits are located.
 
 = Conclusion
 
-Within the EFT of GR+SM, gravitational control channels are classified as source, geometric, and new-sector; each class carries a quantitative boundary, and each boundary has an executable script. The theorem converts "is antigravity possible" from a folklore question into an engineering question with explicit parameter regions; its falsification clause lists four reopening conditions, each mapped to a scheduled experiment.
+Within the EFT of GR+SM, gravitational control channels are classified as source, geometric, and new-sector; each class carries a quantitative boundary, and each boundary has an executable script. The theorem converts "is antigravity possible" from a folklore question into an engineering question with explicit parameter regions; its falsification clause lists five reopening conditions, each mapped to a scheduled experiment—among them the nuclear-clock state-dependence search (Corollary 4), a zero-background falsification test for the entire class of local EFTs.
 
 #pagebreak()
 
