@@ -31,6 +31,10 @@ JOBS = [
     ("Beyond-Three-Unifications-英文版.typ", "Beyond-Three-Unifications-英文版.pdf"),
     ("核钟实验设计方案.typ", "核钟实验设计方案.pdf"),
     ("Nuclear-Clock-Experiment-英文版.typ", "Nuclear-Clock-Experiment-英文版.pdf"),
+    ("统一约束重推导-中文版.typ", "统一约束重推导-中文版.pdf"),
+    ("引力控制通道分类定理-中文版.typ", "引力控制通道分类定理-中文版.pdf"),
+    ("三种相同性-中文版.typ", "三种相同性-中文版.pdf"),
+    ("GIE争论逻辑重建-中文版.typ", "GIE争论逻辑重建-中文版.pdf"),
 ]
 
 for src, dst in JOBS:

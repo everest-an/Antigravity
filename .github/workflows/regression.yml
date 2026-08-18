@@ -1,0 +1,35 @@
+name: regression
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  regression:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install numpy scipy matplotlib qutip quimb python-pptx
+
+      # 计算回归：21 个核算/模拟脚本（相对路径安全）
+      - name: Run computations and simulations
+        run: python run_all.py
+
+      # 论文编译：10 份 Typst 文档
+      - uses: typst-community/setup-typst@v3
+      - name: Compile papers
+        run: python build/build_pdf.py
+
+      # 幻灯片构建（python-pptx）
+      - name: Build slides
+        run: python ppt/build_ppt.py
+
+      # 图件套件暂不纳入 CI：脚本内含本机绝对路径（见 figures/README.md），
+      # 待阶段 6.2 路径重构后加入。
