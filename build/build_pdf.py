@@ -41,6 +41,8 @@ JOBS = [
     ("GIE-Debate-Logic-Reconstruction-英文版.typ", "GIE-Debate-Logic-Reconstruction-英文版.pdf"),
     ("量子态作为控制变量-中文版.typ", "量子态作为控制变量-中文版.pdf"),
     ("Quantum-States-as-Control-Variables-英文版.typ", "Quantum-States-as-Control-Variables-英文版.pdf"),
+    ("三个出口的分流协议-中文版.typ", "三个出口的分流协议-中文版.pdf"),
+    ("Triage-Protocol-for-the-Three-Exits-英文版.typ", "Triage-Protocol-for-the-Three-Exits-英文版.pdf"),
 ]
 
 for src, dst in JOBS:

@@ -337,4 +337,46 @@ for s in ["top", "right"]:
 fig.savefig(str(FIG / "en_fig08_quantum_state_resource.png"))
 plt.close(fig)
 
-print("english figures generated:", ", ".join(f"en_fig0{i+1}" for i in range(8)))
+# ---------------- fig09: triage decision tree ----------------
+from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+C_START, C_TEST, C_EXIT, C_ERR = "#27ae60", "#2980b9", "#c0392b", "#666666"
+
+def box9(ax, x, y, w, h, text, fc, fs=9.5):
+    b = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.03", fc=fc, ec="#444", lw=1.2, alpha=0.92)
+    ax.add_patch(b)
+    ax.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=fs, color="#111")
+
+def arrow9(ax, x1, y1, x2, y2, label="", lx=0, ly=0.0):
+    a = FancyArrowPatch((x1, y1), (x2, y2), arrowstyle="-|>", mutation_scale=16, lw=1.4, color="#333")
+    ax.add_patch(a)
+    if label:
+        ax.text((x1 + x2) / 2 + lx, (y1 + y2) / 2 + ly, label, fontsize=9, color="#333", ha="center")
+
+fig, ax = plt.subplots(figsize=(11, 8))
+ax.set_xlim(0, 11); ax.set_ylim(0, 8); ax.axis("off")
+box9(ax, 3.7, 7.1, 3.6, 0.7, "positive state-dependent signal\n(above readout sensitivity)", C_START, 10)
+box9(ax, 3.7, 5.5, 3.6, 0.8, "Step 1: shape fit\nextended near-range scan 0.02-0.5 m\nsingle vs double exponential", C_TEST)
+arrow9(ax, 5.5, 7.1, 5.5, 6.3)
+box9(ax, 0.3, 5.55, 2.3, 0.7, "dchi2 > 4\nsecond scale detected", C_EXIT)
+arrow9(ax, 3.7, 5.9, 2.6, 5.9, "yes", 0, 0.25)
+box9(ax, 0.3, 4.3, 2.3, 0.7, "EXIT 2: non-locality\n(ghost / multi-scale)", C_EXIT)
+arrow9(ax, 1.45, 5.55, 1.45, 5.0)
+box9(ax, 3.7, 3.9, 3.6, 0.8, "Step 2: multi-probe ratios\n8.36 eV / 76.7 eV / keV / MeV", C_TEST)
+arrow9(ax, 5.5, 5.5, 5.5, 4.7, "no")
+box9(ax, 7.6, 3.95, 3.0, 0.7, "ratio deviates from O-scaling\n~E/Lambda (2% at MeV)", C_EXIT)
+arrow9(ax, 7.3, 4.3, 9.1, 4.3, "yes", 0.25, 0)
+box9(ax, 7.6, 2.7, 3.0, 0.7, "EXIT 1: strong coupling\n(Lambda <~ 43 MeV)", C_EXIT)
+arrow9(ax, 9.1, 3.95, 9.1, 3.4)
+box9(ax, 3.7, 2.3, 3.6, 0.8, "Step 3: m-scan pattern\n(microwave selection + source flip)", C_TEST)
+arrow9(ax, 5.5, 3.9, 5.5, 3.1, "no")
+box9(ax, 0.3, 2.35, 2.3, 0.7, "linear / quadratic pattern\n(proportional to m / m^2)", C_EXIT)
+arrow9(ax, 3.7, 2.7, 2.6, 2.7, "yes", 0, 0.25)
+box9(ax, 0.3, 1.1, 2.3, 0.7, "EXIT 3: state charge\n(spin / quadrupole charge)", C_EXIT)
+arrow9(ax, 1.45, 2.35, 1.45, 1.8)
+box9(ax, 3.7, 0.9, 3.6, 0.7, "constant pattern -> systematics recheck\n(no exit opened)", C_ERR)
+arrow9(ax, 5.5, 2.3, 5.5, 1.6, "no")
+ax.set_title("Triage protocol for the three exits: one experimental round discriminates all (E6)", fontsize=12.5, pad=12)
+fig.savefig(str(FIG / "en_fig09_exit_triage.png"))
+plt.close(fig)
+
+print("english figures generated:", ", ".join(f"en_fig0{i+1}" for i in range(9)))
