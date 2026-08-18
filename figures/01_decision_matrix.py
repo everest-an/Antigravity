@@ -7,7 +7,11 @@ y 轴：19 个箭头（按组排序）
 """
 import sys
 
-sys.path.insert(0, r"D:\Antigravity\figures")
+from pathlib import Path
+FIG = Path(__file__).resolve().parent
+SIM = FIG.parent / "simulations"
+
+sys.path.insert(0, str(FIG))
 import _style  # noqa: F401
 import matplotlib.pyplot as plt
 
@@ -77,7 +81,7 @@ def main():
             transform=ax.transAxes, fontsize=8.5, color=_style.GRAY)
 
     for ext in ["png", "svg"]:
-        fig.savefig(rf"D:\Antigravity\figures\fig01_decision_matrix.{ext}")
+        fig.savefig(FIG / f"fig01_decision_matrix.{ext}")
     print("saved fig01 (png, svg)")
 
 

@@ -6,8 +6,12 @@ x = mincut·lnχ（理论 RT 值），y = ⟨S₂⟩；对角线 = 精确 RT。
 import math
 import sys
 
-sys.path.insert(0, r"D:\Antigravity\figures")
-sys.path.insert(0, r"D:\Antigravity\simulations")
+from pathlib import Path
+FIG = Path(__file__).resolve().parent
+SIM = FIG.parent / "simulations"
+
+sys.path.insert(0, str(FIG))
+sys.path.insert(0, str(SIM))
 import _style  # noqa: F401
 import numpy as np
 import matplotlib.pyplot as plt
@@ -23,8 +27,8 @@ def load(script, name):
     return mod
 
 
-sim05 = load(r"D:\Antigravity\simulations\05_tensor_network_rt.py", "sim05")
-sim07 = load(r"D:\Antigravity\simulations\07_mera_rt.py", "sim07")
+sim05 = load(str(SIM / "05_tensor_network_rt.py"), "sim05")
+sim07 = load(str(SIM / "07_mera_rt.py"), "sim07")
 
 INTERVALS = [
     ("单叶 {0}", [0]),
@@ -90,7 +94,7 @@ def main():
     ax.grid(alpha=0.25)
 
     for ext in ["png", "svg"]:
-        fig.savefig(rf"D:\Antigravity\figures\fig03_rt_mincut.{ext}")
+        fig.savefig(FIG / f"fig03_rt_mincut.{ext}")
     print("saved fig03 (png, svg)")
 
 

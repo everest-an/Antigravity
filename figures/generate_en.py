@@ -5,9 +5,13 @@ figures/generate_en.py —— 生成英文标注版全部 5 幅投稿图
 """
 import math
 import sys
+from pathlib import Path
+FIG = Path(__file__).resolve().parent
+SIM = FIG.parent / "simulations"
 
-sys.path.insert(0, r"D:\Antigravity\figures")
-sys.path.insert(0, r"D:\Antigravity\simulations")
+
+sys.path.insert(0, str(FIG))
+sys.path.insert(0, str(SIM))
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -17,7 +21,6 @@ plt.rcParams["axes.unicode_minus"] = False
 plt.rcParams["figure.dpi"] = 150
 plt.rcParams["savefig.bbox"] = "tight"
 
-FIG = r"D:\Antigravity\figures"
 GRAY = "#666666"
 COLORS = {"false": "#c0392b", "true": "#27ae60", "B": "#2980b9", "C": "#8e44ad"}
 
@@ -66,7 +69,7 @@ ax.legend(loc="lower right", fontsize=9, frameon=False, ncol=4, bbox_to_anchor=(
 ax.set_title("Decision matrix: 19 arrows on unification and anti-gravity (2026-08)", fontsize=13, pad=12)
 ax.text(0.62, -0.05, "Each row carries a discriminating channel, a target it would exclude, and a timescale.",
         transform=ax.transAxes, fontsize=8.5, color=GRAY)
-fig.savefig(FIG + r"\en_fig01_decision_matrix.png")
+fig.savefig(str(FIG / "en_fig01_decision_matrix.png"))
 plt.close(fig)
 
 # ---------------- fig02: reality stack ----------------
@@ -100,7 +103,7 @@ ax.text(11.55, 2.2, "phase\nreadout", fontsize=9, color="#2980b9", ha="center", 
 ax.text(9.75, 3.0, "Tμν unique entry\n(control-channel theorem)", fontsize=9.5, color="#27ae60", ha="center", fontweight="bold")
 ax.text(6, 0.25, "Humanity leads on the measurement stack and is nearly blank on the control stack — "
                  "the meaning of 'gravity is the wrong engineering variable'.", ha="center", fontsize=9, color=GRAY)
-fig.savefig(FIG + r"\en_fig02_reality_stack.png")
+fig.savefig(str(FIG / "en_fig02_reality_stack.png"))
 plt.close(fig)
 
 # ---------------- fig03: RT mincut (from simulations) ----------------
@@ -110,8 +113,8 @@ def load(script, name):
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
-sim05 = load(r"D:\Antigravity\simulations\05_tensor_network_rt.py", "sim05")
-sim07 = load(r"D:\Antigravity\simulations\07_mera_rt.py", "sim07")
+sim05 = load(str(SIM / "05_tensor_network_rt.py"), "sim05")
+sim07 = load(str(SIM / "07_mera_rt.py"), "sim07")
 INTERVALS = [("single {0}", [0]), ("adjacent pair {0,1}", [0, 1]), ("distant pair {0,4}", [0, 4]),
              ("half tree {0..3}", [0, 1, 2, 3]), ("three across {0,1,4}", [0, 1, 4])]
 rng05 = np.random.default_rng(42); rng07 = np.random.default_rng(7)
@@ -139,7 +142,7 @@ ax.set_ylabel("⟨S2(A)⟩", fontsize=11)
 ax.set_title("Entanglement entropy = minimal surface: two independent implementations", fontsize=12)
 ax.legend(fontsize=9, frameon=False)
 ax.grid(alpha=0.25)
-fig.savefig(FIG + r"\en_fig03_rt_mincut.png")
+fig.savefig(str(FIG / "en_fig03_rt_mincut.png"))
 plt.close(fig)
 
 # ---------------- fig04: fifth force ----------------
@@ -172,7 +175,7 @@ ax.set_title("Fifth-force landscape: α ~ O(1) excluded; the KK eV requirement s
 ax.set_ylim(1e-16, 1e1)
 ax.legend(fontsize=8.5, frameon=False, loc="lower left")
 ax.grid(alpha=0.25, which="both")
-fig.savefig(FIG + r"\en_fig04_fifth_force.png")
+fig.savefig(str(FIG / "en_fig04_fifth_force.png"))
 plt.close(fig)
 
 # ---------------- fig05: GIE discrimination ----------------
@@ -225,7 +228,55 @@ ax2.set_ylabel("deviation from qubit limit", fontsize=11)
 ax2.set_title("(b) Qubit-abstraction fidelity: CV convergence ∝ e^(−2α²)", fontsize=11.5)
 ax2.legend(fontsize=8.5, frameon=False)
 ax2.grid(alpha=0.25, which="both")
-fig.savefig(FIG + r"\en_fig05_gie_discrimination.png")
+fig.savefig(str(FIG / "en_fig05_gie_discrimination.png"))
 plt.close(fig)
 
-print("english figures generated:", ", ".join(f"en_fig0{i+1}" for i in range(5)))
+# ---------------- fig06: nuclear-clock reachability ----------------
+E_TRANS = 8.36
+S_LAB = 9.5e-14
+S_ORB = 2.79
+A_ORB = 6.771e6
+SIGMA0 = 4.6e-23
+
+def alpha_min(lamb, tau, s):
+    return E_TRANS * SIGMA0 / np.sqrt(tau) / s * np.exp(A_ORB / lamb)
+
+lambs = np.logspace(5, 11, 300)
+taus = [1e3, 1e4, 1e5, 1e6]
+ccolors = ["#9fb8d4", "#6fa8dc", "#3d85c6", "#0b5394"]
+fig, ax = plt.subplots(figsize=(9.5, 6.5))
+for tau, c in zip(taus, ccolors):
+    ax.plot(lambs, alpha_min(lambs, tau, S_LAB), color=c, lw=1.8,
+            label=f"laboratory a_min (tau={tau:.0e} s)")
+a_orb = E_TRANS * SIGMA0 / np.sqrt(1e6) / S_ORB
+ax.axhline(a_orb, color="#27ae60", lw=1.6, ls=":",
+           label=f"orbital a_min (tau=1e6 s) ~ {a_orb:.0e}")
+segs = [(1e5, 1e7, 1e-9, "#8e44ad", "LAGEOS/GEO"),
+        (1e7, 3.8e8, 1e-9, "#8e44ad", None),
+        (3.8e8, 1.5e11, 3e-11, "#8e44ad", "LLR"),
+        (1.5e11, 3e11, 1e-8, "#8e44ad", "planetary")]
+for x0, x1, y, c, lab in segs:
+    ax.plot([x0, x1], [y, y], color=c, lw=2.4, ls="--", alpha=0.85)
+    if lab:
+        ax.text(x1 * 1.06, y, lab, fontsize=8.5, color=c, va="center")
+ax.plot([], [], color="#8e44ad", lw=2.4, ls="--", label="existing universal bound (ranging)")
+ax.plot([7e6, 3e11], [5.5e-15, 5.5e-15], color="#d35400", lw=2.0, ls="-.",
+        label="MICROSCOPE composition channel (2-sigma saturated)")
+ax.axhspan(1e-12, 1e-6, color="#f1c40f", alpha=0.10)
+ax.text(1.6e5, 3e-11, "unexcluded window\na in [1e-12, 1e-6]", fontsize=9.5,
+        color="#7d6608", va="center")
+ax.annotate("tau=1e6 s curve is 1-2 orders deeper\nthan ranging bounds in lambda in [1e7, 1e10] m",
+            xy=(1e8, 4.3e-12), xytext=(4e5, 2e-14),
+            fontsize=9, color="#0b5394",
+            arrowprops=dict(arrowstyle="->", color="#0b5394", lw=1))
+ax.set_xscale("log"); ax.set_yscale("log")
+ax.set_xlim(1e5, 3e11); ax.set_ylim(1e-26, 1e-4)
+ax.set_xlabel("lambda [m]  (Yukawa range)", fontsize=11)
+ax.set_ylabel("a_min  (detectable coupling, 1-sigma)", fontsize=11)
+ax.set_title("Nuclear-clock KK reachability: lab a_min(lambda, tau) + orbital limit vs existing bounds", fontsize=12)
+ax.legend(fontsize=8.5, frameon=False, loc="lower left")
+ax.grid(alpha=0.25, which="both")
+fig.savefig(str(FIG / "en_fig06_reachability.png"))
+plt.close(fig)
+
+print("english figures generated:", ", ".join(f"en_fig0{i+1}" for i in range(6)))

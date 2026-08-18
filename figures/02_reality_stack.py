@@ -4,7 +4,11 @@
 """
 import sys
 
-sys.path.insert(0, r"D:\Antigravity\figures")
+from pathlib import Path
+FIG = Path(__file__).resolve().parent
+SIM = FIG.parent / "simulations"
+
+sys.path.insert(0, str(FIG))
 import _style  # noqa: F401
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
@@ -59,7 +63,7 @@ def main():
             ha="center", fontsize=9, color=_style.GRAY)
 
     for ext in ["png", "svg"]:
-        fig.savefig(rf"D:\Antigravity\figures\fig02_reality_stack.{ext}")
+        fig.savefig(FIG / f"fig02_reality_stack.{ext}")
     print("saved fig02 (png, svg)")
 
 

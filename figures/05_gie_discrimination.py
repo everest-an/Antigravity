@@ -7,8 +7,12 @@
 import math
 import sys
 
-sys.path.insert(0, r"D:\Antigravity\figures")
-sys.path.insert(0, r"D:\Antigravity\simulations")
+from pathlib import Path
+FIG = Path(__file__).resolve().parent
+SIM = FIG.parent / "simulations"
+
+sys.path.insert(0, str(FIG))
+sys.path.insert(0, str(SIM))
 import _style  # noqa: F401
 import numpy as np
 import matplotlib.pyplot as plt
@@ -85,7 +89,7 @@ def main():
     ax2.grid(alpha=0.25, which="both")
 
     for ext in ["png", "svg"]:
-        fig.savefig(rf"D:\Antigravity\figures\fig05_gie_discrimination.{ext}")
+        fig.savefig(FIG / f"fig05_gie_discrimination.{ext}")
     print("saved fig05 (png, svg)")
 
 

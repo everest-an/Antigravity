@@ -37,7 +37,7 @@ SUITES = [
     ("figures-cn（中文图）", [
         ROOT / "figures" / f"0{i}_{n}.py" for i, n in [
             (1, "decision_matrix"), (2, "reality_stack"), (3, "rt_mincut"),
-            (4, "fifth_force"), (5, "gie_discrimination")]]),
+            (4, "fifth_force"), (5, "gie_discrimination"), (6, "reachability")]]),
     ("figures-en（英文图）", [ROOT / "figures" / "generate_en.py"]),
     ("papers（论文 PDF）", [ROOT / "build" / "build_pdf.py"]),
     ("slides（幻灯片）", [ROOT / "ppt" / "build_ppt.py"]),
