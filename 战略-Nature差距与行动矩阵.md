@@ -51,13 +51,15 @@ Nature 家族物理论文只有两种形态：新数据，或一条让领域重�
 在形式上只能是三种结构之一——映射（转换式）、共同投影（几何式）、共享代数不变量（代数式）。
 三者之外没有第四种。
 
-### 2.2 形式化框架（奠基文献）
+### 2.2 形式化框架（奠基文献，已补检索回填）
 
 - **理论的形式化**：Halvorson《Scientific Theories》（2019）的范畴论框架——理论 = 范畴，
   物理等价 = 范畴等价/同构。这是完备性证明的形式语言。
-- **对偶的形式化**：De Haro & Butterfield《On Dualities and Equivalences Between Physical
-  Theories》（2017–2021 系列）；Read & Møller 的"motivational equivalence"；Nguyen–Teh–Wells
-  关于规范理论范畴等价与剩余结构。
+- **对偶的形式化（本轮 arXiv 检索确认）**：
+  Butterfield, De Haro 等《On Dualities and Equivalences Between Physical Theories》
+  （arXiv:1806.01505, 2018）——直接对应本定理的目标命题；
+  Weatherall《Theoretical Equivalence in Physics》（arXiv:1810.08192, 2018）；
+  De Haro《Conceptual Aspects of Gauge/Gravity Duality》（arXiv:1509.09231, 2015）。
 - **物理侧的三个原型**（已有文献）：转换式 = 电磁对偶（自对偶扇区的精确映射）；
   几何式 = Kaluza–Klein（纤维化投影）；代数式 = double copy（kinematic algebra 的平方映射）。
 
@@ -94,14 +96,17 @@ Nature 家族物理论文只有两种形态：新数据，或一条让领域重�
 **推论**：引力工程在 GR+SM 内 = 应力能量工程；任何"反重力"装置必须落在三类通道
 之一，而每一类都已被定量约束。
 
-### 3.2 奠基文献（定理的四根支柱）
+### 3.2 奠基文献（定理的四根支柱，已补检索回填）
 
 | 支柱 | 文献 | 定理中的作用 |
 |---|---|---|
-| 正能定理 | Schoen–Yau（1979/1981）；Witten（1981） | 满足主能条件的孤立系统 ADM 质量非负 → 普通物质在无穷远处无法产生净排斥引力（"无负质量"的严格版） |
-| EFT 框架 | Donoghue（PRD 1994）；Burgess（Living Rev. 2004） | 度规-物质耦合按维数组织的合法框架 |
+| 正能定理 | Schoen–Yau（1979/1981）；Witten（1981）；Tsang《Positive mass theorem for initial data sets with arbitrary ends》（arXiv:2604.26978, 2026）；Raulot《Positive Energy Theorems for Spin Initial Data with Charge》（arXiv:2509.05244, 2025） | 满足主能条件的孤立系统 ADM 质量非负 → 普通物质在无穷远处无法产生净排斥引力 |
+| EFT 框架 | Donoghue（PRD 1994）；Burgess（Living Rev. 2004）；《Higher-derivative gravitational EFTs are generically weakly hyperbolic》（2025，q4 检索）——高阶曲率理论自身病态，支持"几何通道不可工程化" | 度规-物质耦合按维数组织的合法框架 |
 | 曲率项约束 | Will（Living Rev. 2014）PPN 系综；双脉冲星；GW170817 光速约束 | 几何通道系数的定量压制 |
-| 能量条件 | Ford–Roman 量子不等式系列；Roman 综述 | 源通道的量子边界（负能量的宏观利用被排除） |
+| 能量条件 | Ford–Roman 量子不等式系列；Maier《A No-Go Theorem for Topological Bridges with Matter-Vacuum Coupling》（arXiv:2605.14027, 2026）；Cataldo《Can wormhole spacetimes in Unimodular Gravity be supported by ordinary matter?》（arXiv:2603.14718, 2026） | 源通道的量子边界与"奇异物质必要性"的一般证明 |
+
+*检索注*：2026 年的 no-go 文献（Maier、Cataldo、Tsang）表明该方向正活跃——时点性论证成立，
+与 Perspective pitching 的"为什么现在"问题直接呼应。
 
 ### 3.3 与既有 no-go 文献的关系（差异声明，已在附件 G 记录）
 
