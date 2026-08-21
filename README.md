@@ -2,6 +2,11 @@
 
 《从特斯拉到时空工程》——统一场、量子现实与可编程时空。
 
+## 许可证
+
+- **代码**（`experiments/`、`simulations/`、`figures/`、`build/build_pdf.py`、`test_all.py`、`run_all.py`、`ppt/build_ppt.py` 等全部脚本）：MIT 许可证（见 `LICENSE`）——任何人可自由使用、修改、再分发，仅需保留版权声明。
+- **论文与文档**（`paper/` 全部 Typst 源与 `build/*.pdf`、各 `*.md` 工作文档）：保留版权（All Rights Reserved）。引用请按学术规范标注作者与仓库；转载/衍生需事先获得作者许可。
+
 ## 正式论文（投稿格式，中英双语，9 篇 × 2 = 18 份 PDF）
 
 | # | 论文 | PDF（`build/`） | 定位 |
