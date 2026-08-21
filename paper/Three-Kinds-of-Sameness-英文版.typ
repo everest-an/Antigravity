@@ -53,7 +53,7 @@ The formal duality-equivalence literature (De Haro-Butterfield; Weatherall) chie
 
 == Definition of a sameness claim
 
-*Definition*. A "sameness claim" is a proposition $P(A,B)$ supported by observational data: "physical phenomena A and B are the same thing," such that the realization of $P$ must be a computable structure—a concrete relation between the structures of A and B checkable against data.
+*Definition*. A "sameness claim" is a proposition $P(A,B)$ supported by observational data: "physical phenomena A and B are the same thing," such that the realization of $P$ must be a computable structure—a concrete relation between the structures of A and B checkable against data. The computability requirement is substantive rather than definitional: it excludes untestable sameness assertions (such as purely metaphysical "identity"), which is precisely the boundary between scientific assertions and metaphysical ones; the trichotomy's exhaustive force comes from the categorical decomposition principle (next section), not from the wording of this definition.
 
 = Theorem: Completeness of the Trichotomy
 
@@ -69,7 +69,7 @@ The formal duality-equivalence literature (De Haro-Butterfield; Weatherall) chie
 A fourth structural basis does not exist.
 #set par(first-line-indent: 1.6em)
 
-*Sketch of proof*. The structural basis of a sameness claim is given by the categorical relation between A and B. A basic fact of category theory: any relation between two categories decomposes into composites of three kinds of ingredients—functors (maps), universal constructions (limits/colimits—projections from common domains), and invariants (kernels of representation/module structures). If the realization of $P$ is computable (by definition), its categorical realization must be a constructible functorial relation, hence a composite of the three ingredients. The three ingredients correspond exactly to the three unifications. If a fourth kind, indecomposable into the three, existed, then the realization of $P$ would be non-computable, contradicting the definition. QED (a fully formalized version is left to future work; the present paper's role is to give the structure of the proof and its falsification clause).
+*Sketch of proof*. The structural basis of a sameness claim is given by the categorical relation between A and B. The proof adopts the following framework principle, stated explicitly rather than presented as a textbook theorem: any relation between two categories decomposes into composites of three kinds of ingredients—functors (maps), universal constructions (limits/colimits—projections from common domains), and invariants (kernels of representation/module structures). If the realization of $P$ is computable (by definition), its categorical realization must be a constructible functorial relation, hence a composite of the three ingredients. The three ingredients correspond exactly to the three unifications. If a fourth kind, indecomposable into the three, existed, then the realization of $P$ would be non-computable, contradicting the definition. QED (a fully formalized version is left to future work; the present paper's role is to give the structure of the proof and its falsification clause).
 
 = Physical Correspondence: Three Structures ↔ Three Evidence Regimes
 
@@ -101,7 +101,7 @@ The 2025 monograph by De Haro and Butterfield, *The Philosophy and Physics of Du
 (3) *Testability link*. Our structure-evidence correspondence (Table 1) adds a dimension the monograph does not systematize: the structural type of a sameness claim determines how it can be tested—map type by computation, projection type by window narrowing, invariant type by ontological silence. This is the bridge from "formal criteria of theoretical equivalence" to "testing strategies for unification claims," and the point where the adjudication-matrix methodology gains a footing in the philosophy-of-physics literature.
 #set par(first-line-indent: 1.6em)
 
-*Methodological statement*: we do not challenge the monograph's equivalence criterion; our claim is that whenever physicists say "A and B are the same thing," the structural basis of the assertion is one of only three kinds, each with a distinct evidential fate—stated within the monograph's framework as a categorical fact (the completeness theorem), with its correction conditions made public through the falsification clause. In venue terms, this paper is addressed to readers of philosophy of physics (SHPSM / Philosophy of Science): the trichotomy is a philosophical proposition, and the physics content (the adjudication matrix, the scripts) is its testing support.
+*Methodological statement*: we do not challenge the monograph's equivalence criterion; our claim is that whenever physicists say "A and B are the same thing," the structural basis of the assertion is one of only three kinds, each with a distinct evidential fate—stated within the monograph's framework as a categorical fact (the completeness theorem), with its correction conditions made public through the falsification clause. The trichotomy is a philosophical proposition; its testing support is the adjudication matrix and the companion scripts.
 
 = Falsification Clause
 
@@ -129,3 +129,4 @@ The three unifications are not one viewpoint among many but the three possible s
 
 #v(0.4em)
 *Statement*　The categorical language of this paper serves only as a classification skeleton; all physical content comes from the companion papers and the literature.
+*Code availability*　The adjudication matrix and all companion scripts at github.com/everest-an/Antigravity.
